@@ -1,0 +1,1041 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tempiax · Agentes de IA para concesionarias</title>
+<meta name="description" content="Un agente de IA atiende por WhatsApp las consultas de tu concesionaria, las califica y le pasa al vendedor los clientes listos para avanzar. Tempiax lo instala, lo configura y lo opera.">
+<meta name="theme-color" content="#f2fcfe">
+<meta name="color-scheme" content="light">
+<meta property="og:title" content="Tempiax · Ninguna consulta sin respuesta">
+<meta property="og:description" content="Agentes de IA para WhatsApp, instalados y operados para tu concesionaria, con un CRM que queda a tu nombre.">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='71 68 3957 4017'%3E%3Cg transform='translate(0 4157) scale(1 -1)'%3E%3Cpath fill='%233873fb' d='M330 4088 c-97 -3 -187 -16 -220 -31 -44 -21 -51 -74 -19 -135 11 -22 26 -44 59 -85 60 -77 91 -120 182 -249 72 -103 104 -147 191 -266 161 -218 207 -283 288 -404 163 -244 208 -269 465 -253 46 3 86 5 133 7 43 2 272 2 347 0 165 -3 406 -4 624 -1 114 2 338 2 388 0 22 0 59 -2 81 -2 83 -3 112 -3 148 1 110 11 149 40 234 175 28 43 48 73 102 144 42 56 81 110 143 198 91 127 124 174 185 259 238 330 316 439 336 472 34 56 36 92 7 125 -38 41 -127 52 -360 42 -122 -4 -245 -4 -380 1 -202 7 -291 -4 -375 -46 -68 -34 -95 -64 -185 -203 -29 -44 -63 -95 -120 -181 -221 -334 -276 -418 -408 -618 -51 -78 -59 -89 -77 -108 -36 -35 -68 -34 -108 6 -17 18 -27 33 -63 91 -34 56 -78 122 -148 225 -43 62 -119 176 -166 249 -275 422 -311 472 -360 513 -72 60 -174 78 -379 71 -129 -5 -157 -5 -312 0 -118 4 -177 5 -233 3z M2839 2199 c-29 -4 -59 -24 -125 -83 -45 -40 -52 -46 -104 -86 -73 -57 -95 -76 -135 -115 -96 -94 -163 -194 -195 -293 -69 -216 9 -481 195 -664 60 -58 117 -102 251 -193 310 -210 377 -296 477 -612 25 -79 60 -90 240 -75 78 6 120 7 195 7 59 0 85 0 162 -4 108 -4 152 2 187 27 35 25 48 59 37 98 -12 39 -85 183 -158 312 -37 66 -69 119 -143 242 -117 193 -151 252 -310 533 -112 198 -140 247 -225 392 -97 165 -132 227 -190 334 -34 63 -46 85 -55 100 -37 61 -69 85 -104 80z M1241 2198 c-35 -5 -59 -34 -102 -119 -36 -73 -52 -102 -117 -210 -45 -76 -104 -176 -151 -258 -34 -58 -91 -158 -148 -258 -182 -320 -212 -372 -338 -583 -158 -264 -237 -408 -296 -539 -27 -59 -23 -90 14 -117 41 -32 90 -38 252 -31 128 5 212 4 304 -5 122 -11 170 -7 204 16 17 12 26 28 42 78 64 198 134 318 246 422 54 49 99 84 225 172 139 98 193 140 252 199 193 191 274 457 205 667 -43 130 -141 245 -334 395 -62 47 -74 57 -112 89 -56 48 -78 64 -105 75 -14 6 -32 9 -41 7z'/%3E%3Cpath fill='%23fe6700' d='M2647 2618 c-95 -4 -202 -32 -313 -83 -54 -24 -88 -42 -190 -101 -225 -128 -287 -146 -463 -130 -109 9 -160 2 -167 -23 -6 -22 39 -73 123 -140 87 -71 135 -116 188 -180 156 -192 216 -417 171 -642 -34 -169 -116 -297 -295 -462 -27 -24 -51 -45 -102 -91 -224 -196 -309 -306 -362 -465 -35 -105 -38 -165 -8 -187 28 -19 48 -21 321 -22 93 0 196 -1 230 -2 89 -2 350 -2 436 0 87 2 262 2 305 0 17 -1 50 -2 74 -4 146 -8 216 0 260 30 47 32 45 75 -12 205 -67 152 -126 227 -312 403 -195 183 -280 282 -346 403 -121 224 -125 494 -10 700 63 112 146 206 330 369 165 148 227 214 280 302 39 65 43 89 18 102 -24 12 -95 21 -156 18z'/%3E%3C/g%3E%3C/svg%3E">
+
+<!--
+  TIPOGRAFÍA DE TÍTULOS: Gilroy ExtraBold se carga desde fonts/gilroy-extrabold.woff2.
+  IMPORTANTE: la licencia de Gilroy permite uso web comercial pero PROHÍBE redistribuir el archivo.
+  NO subas la carpeta fonts/ a un repositorio público (está excluida en .gitignore). Subila solo al hosting.
+-->
+<link rel="preload" href="fonts/gilroy-extrabold.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+@font-face {
+  font-family: "Gilroy";
+  src: url("fonts/gilroy-extrabold.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* Colores oficiales de marca */
+  --blue: #3873fb;        /* acento principal: botones, énfasis */
+  --orange: #fe6700;      /* acento gráfico secundario: detalles, estado "activo". Nunca texto chico */
+  --bg: #f2fcfe;          /* fondo base */
+
+  /* Derivados para legibilidad (no reemplazan a los oficiales) */
+  --ink: #0c1a3a;         /* texto principal, ~16:1 sobre --bg */
+  --ink-2: #34476b;       /* texto secundario, ~8:1 sobre --bg */
+  --blue-ink: #1f56d8;    /* azul para enlaces y texto chico, ~6:1 sobre --bg (#3873fb da 4.1:1) */
+  --surface: #ffffff;
+  --surface-2: #e4f4f9;
+  --line: #cde2ea;
+  --orange-soft: #fff1e7;
+  --blue-soft: #e5edff;
+
+  --f-title: "Gilroy", "Avenir Next", "Segoe UI", "Helvetica Neue", Roboto, Arial, sans-serif;
+  --f-body: "Atkinson Hyperlegible", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --f-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+
+  --radius: 18px;
+  --radius-sm: 12px;
+  --gutter: 20px;
+  --section: 80px;
+  --shadow: 0 1px 2px rgba(12, 26, 58, .06), 0 10px 30px -12px rgba(12, 26, 58, .18);
+}
+@media (min-width: 900px) {
+  :root { --gutter: 32px; --section: 128px; }
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--f-body);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  overflow-x: hidden;
+  text-rendering: optimizeLegibility;
+}
+img, svg { display: block; max-width: 100%; }
+a { color: var(--blue-ink); text-underline-offset: 3px; }
+a:hover { color: var(--ink); }
+:focus-visible { outline: 3px solid var(--blue-ink); outline-offset: 3px; border-radius: 6px; }
+
+h1, h2, h3 {
+  font-family: var(--f-title);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.015em;
+  margin: 0;
+  text-wrap: balance;
+}
+h1 { font-size: clamp(2.05rem, 7.6vw, 3.75rem); }
+h2 { font-size: clamp(1.7rem, 5.6vw, 2.7rem); }
+h3 { font-size: 1.25rem; line-height: 1.25; }
+p { margin: 0; text-wrap: pretty; }
+
+.wrap { width: 100%; max-width: 1140px; margin: 0 auto; padding: 0 var(--gutter); }
+.section { padding: var(--section) 0; position: relative; }
+.section + .section { padding-top: 0; }
+.section.band { background: var(--surface-2); padding-top: var(--section); }
+.section.band + .section { padding-top: var(--section); }
+
+.eyebrow, .mono {
+  font-family: var(--f-mono);
+  font-weight: 500;
+  font-size: .8125rem;
+  letter-spacing: .04em;
+}
+.eyebrow {
+  display: inline-flex; align-items: center; gap: 10px;
+  text-transform: uppercase;
+  color: var(--ink-2);
+  margin-bottom: 18px;
+}
+.eyebrow::before {
+  content: ""; width: 8px; height: 8px; border-radius: 50%;
+  background: var(--orange); flex: none;
+}
+.lead { font-size: 1.1875rem; color: var(--ink-2); max-width: 60ch; }
+.head { max-width: 760px; margin-bottom: 44px; }
+.head .lead { margin-top: 18px; }
+.ph { /* placeholder visible para completar */
+  font-family: var(--f-mono); font-size: .92em; font-weight: 500;
+  background: var(--orange-soft); color: var(--ink);
+  border: 1px dashed var(--orange); border-radius: 6px; padding: 0 5px;
+  white-space: nowrap;
+}
+
+/* ---------- Botones ---------- */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+  min-height: 56px; padding: 14px 22px;
+  border-radius: 14px; border: 2px solid transparent;
+  font-family: var(--f-body); font-weight: 700; font-size: 1.2rem; line-height: 1.2;
+  text-decoration: none; text-align: center;
+  transition: transform .15s ease, background-color .15s ease, box-shadow .15s ease;
+  cursor: pointer;
+}
+.btn svg { width: 22px; height: 22px; flex: none; }
+.btn-primary { background: var(--blue); color: #fff; box-shadow: 0 8px 22px -10px rgba(56, 115, 251, .9); }
+.btn-primary:hover { background: var(--blue-ink); color: #fff; transform: translateY(-1px); }
+.btn-secondary { background: var(--surface); color: var(--blue-ink); border-color: var(--blue-ink); }
+.btn-secondary:hover { background: var(--blue-soft); color: var(--blue-ink); }
+.btn-row { display: flex; flex-direction: column; gap: 12px; }
+@media (min-width: 560px) { .btn-row { flex-direction: row; flex-wrap: wrap; } }
+
+/* ---------- Encabezado ---------- */
+/* Margen libre del logo = altura de la "i" del imagotipo (~78% del alto del SVG) */
+.brand { --logo-h: 26px; display: inline-block; padding: calc(var(--logo-h) * .78) 0; line-height: 0; }
+.brand svg { height: var(--logo-h); width: auto; }
+.site-header { position: relative; z-index: 20; background: var(--bg); }
+@media (min-width: 900px) {
+  .site-header { position: sticky; top: 0; border-bottom: 1px solid transparent; transition: border-color .2s, box-shadow .2s; }
+  .site-header.scrolled { border-color: var(--line); box-shadow: 0 6px 20px -16px rgba(12,26,58,.4); }
+}
+.site-header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.site-header nav { display: none; }
+@media (min-width: 900px) {
+  .site-header nav { display: flex; gap: 28px; margin-left: auto; margin-right: 8px; }
+  .site-header nav a { color: var(--ink-2); text-decoration: none; font-weight: 700; font-size: .98rem; }
+  .site-header nav a:hover { color: var(--blue-ink); }
+}
+.header-cta { min-height: 44px; padding: 8px 16px; font-size: 1rem; border-radius: 12px; }
+.header-cta svg { width: 18px; height: 18px; }
+@media (max-width: 899px) { .header-cta { display: none; } }
+
+/* ---------- Hero ---------- */
+.hero { padding: 24px 0 var(--section); }
+.hero-grid { display: grid; gap: 48px; align-items: center; }
+@media (min-width: 980px) { .hero-grid { grid-template-columns: 1.15fr .85fr; gap: 64px; } .hero { padding-top: 56px; } }
+.status-chip {
+  display: inline-flex; align-items: center; gap: 10px;
+  background: var(--surface); border: 1px solid var(--line); border-radius: 999px;
+  padding: 6px 14px 6px 10px; margin-bottom: 26px;
+  font-family: var(--f-mono); font-size: .8125rem; color: var(--ink-2);
+}
+.pulse { position: relative; width: 10px; height: 10px; border-radius: 50%; background: var(--orange); flex: none; }
+.pulse::after {
+  content: ""; position: absolute; inset: -4px; border-radius: 50%;
+  border: 2px solid var(--orange); opacity: 0; animation: pulse 2s ease-out infinite;
+}
+@keyframes pulse { 0% { transform: scale(.5); opacity: .8; } 100% { transform: scale(1.5); opacity: 0; } }
+@media (prefers-reduced-motion: reduce) { .pulse::after { animation: none; } }
+.hero h1 { max-width: 17ch; }
+.hero .lead { margin: 24px 0 32px; }
+.micro {
+  margin-top: 22px; display: flex; flex-wrap: wrap; gap: 6px 14px;
+  font-family: var(--f-mono); font-size: .8125rem; color: var(--ink-2);
+}
+.micro > span { display: inline-flex; align-items: center; gap: 8px; }
+.micro > span + span::before { content: ""; width: 4px; height: 4px; border-radius: 50%; background: var(--orange); }
+
+/* Mini notificación del hero */
+.hero-visual { position: relative; }
+.notif-stack { display: grid; gap: 12px; max-width: 420px; margin: 0 auto; }
+.notif {
+  background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 16px 18px; box-shadow: var(--shadow);
+  display: grid; grid-template-columns: auto 1fr; gap: 4px 14px; align-items: start;
+}
+.notif .ico { grid-row: span 2; width: 40px; height: 40px; border-radius: 12px; display: grid; place-items: center; background: var(--blue-soft); }
+.notif .ico svg { width: 24px; height: 24px; }
+.notif .ico.iso { background: var(--surface-2); padding: 7px; }
+.notif .ico.iso svg { width: 100%; height: 100%; }
+.notif .top { display: flex; justify-content: space-between; gap: 10px; font-weight: 700; font-size: .98rem; }
+.notif .top time { font-family: var(--f-mono); font-weight: 400; font-size: .78rem; color: var(--ink-2); white-space: nowrap; }
+.notif p { font-size: .95rem; color: var(--ink-2); line-height: 1.45; }
+.notif.active { border-color: var(--orange); box-shadow: 0 0 0 3px var(--orange-soft), var(--shadow); }
+@media (min-width: 980px) { .notif:nth-child(2) { margin-left: 36px; } .notif:nth-child(3) { margin-left: 12px; } }
+
+/* ---------- Problema ---------- */
+.grid-4 { display: grid; gap: 16px; }
+@media (min-width: 680px) { .grid-4 { grid-template-columns: repeat(2, 1fr); gap: 20px; } }
+.card {
+  background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 26px 24px;
+}
+.problem { position: relative; padding-top: 58px; }
+.problem .tag {
+  position: absolute; top: 22px; left: 24px;
+  font-family: var(--f-mono); font-size: .78rem; color: var(--ink-2);
+  display: inline-flex; align-items: center; gap: 8px;
+}
+.problem .tag::before { content: ""; width: 8px; height: 8px; border-radius: 2px; background: var(--orange); }
+.problem h3 { margin-bottom: 10px; }
+.problem p { color: var(--ink-2); }
+
+/* ---------- Pasos ---------- */
+.steps { list-style: none; margin: 0; padding: 0; display: grid; gap: 16px; counter-reset: step; }
+@media (min-width: 900px) { .steps { grid-template-columns: repeat(3, 1fr); gap: 20px; } }
+.step { counter-increment: step; position: relative; }
+.step .num {
+  display: inline-grid; place-items: center; width: 44px; height: 44px; border-radius: 50%;
+  border: 2px solid var(--orange); font-family: var(--f-mono); font-weight: 500; color: var(--ink);
+  margin-bottom: 18px; background: var(--surface);
+}
+.step h3 { margin-bottom: 10px; }
+.step p { color: var(--ink-2); }
+.step .note { margin-top: 14px; font-size: .92rem; padding-top: 14px; border-top: 1px dashed var(--line); }
+
+/* ---------- Demo de chat ---------- */
+.demo-grid { display: grid; gap: 28px; align-items: start; }
+@media (min-width: 960px) { .demo-grid { grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr); gap: 48px; } }
+.phone {
+  background: var(--surface); border: 1px solid var(--line); border-radius: 28px;
+  box-shadow: var(--shadow); overflow: hidden; max-width: 480px; width: 100%; margin: 0 auto;
+}
+.chat-head {
+  display: flex; align-items: center; gap: 12px; padding: 14px 16px;
+  background: var(--surface); border-bottom: 1px solid var(--line);
+}
+.avatar { width: 42px; height: 42px; border-radius: 50%; background: var(--surface-2); padding: 8px; flex: none; }
+.avatar svg { width: 100%; height: 100%; }
+.chat-head strong { display: block; font-size: 1rem; line-height: 1.2; }
+.chat-head .mono { font-size: .75rem; color: var(--ink-2); display: inline-flex; align-items: center; gap: 6px; }
+.chat-head .mono::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--orange); }
+.chat-body {
+  padding: 18px 14px 22px; display: flex; flex-direction: column; gap: 10px;
+  background:
+    radial-gradient(circle at 1px 1px, rgba(56,115,251,.10) 1px, transparent 0) 0 0 / 18px 18px,
+    #eaf5f8;
+  min-height: 420px;
+}
+.day { align-self: center; font-family: var(--f-mono); font-size: .72rem; color: var(--ink-2); background: var(--surface); border-radius: 8px; padding: 3px 10px; margin-bottom: 4px; }
+.msg {
+  max-width: 86%; padding: 9px 12px 7px; border-radius: 14px; font-size: .98rem; line-height: 1.45;
+  box-shadow: 0 1px 1px rgba(12,26,58,.08); position: relative;
+}
+.msg time { display: block; text-align: right; font-family: var(--f-mono); font-size: .7rem; color: var(--ink-2); margin-top: 3px; }
+.msg.in { align-self: flex-start; background: var(--surface); border-top-left-radius: 4px; }
+.msg.out { align-self: flex-end; background: #dbe7ff; border-top-right-radius: 4px; }
+.msg.out .who { display: block; font-family: var(--f-mono); font-size: .7rem; color: var(--blue-ink); font-weight: 500; margin-bottom: 2px; }
+.sys {
+  align-self: center; display: inline-flex; align-items: center; gap: 8px; text-align: center;
+  background: var(--surface); border: 1px solid var(--orange); border-radius: 10px;
+  padding: 6px 12px; font-family: var(--f-mono); font-size: .75rem; color: var(--ink); margin-top: 6px;
+}
+.sys::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--orange); flex: none; }
+.typing { align-self: flex-end; background: #dbe7ff; border-radius: 14px; padding: 12px 14px; display: none; gap: 4px; }
+.typing i { width: 7px; height: 7px; border-radius: 50%; background: var(--blue-ink); opacity: .4; animation: blink 1.2s infinite; }
+.typing i:nth-child(2) { animation-delay: .2s; } .typing i:nth-child(3) { animation-delay: .4s; }
+.typing.left { align-self: flex-start; background: var(--surface); }
+@keyframes blink { 0%, 80%, 100% { opacity: .25; } 40% { opacity: 1; } }
+.js .chat-body .step-item { opacity: 0; transform: translateY(8px); transition: opacity .35s ease, transform .35s ease; }
+.js .chat-body .step-item.shown { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) { .js .chat-body .step-item { opacity: 1; transform: none; transition: none; } }
+
+.summary { padding: 26px 24px; }
+.summary .eyebrow { margin-bottom: 14px; }
+.summary h3 { margin-bottom: 18px; }
+.kv { display: grid; gap: 0; margin: 0; }
+.kv div { display: grid; grid-template-columns: 9.5em 1fr; gap: 12px; padding: 12px 0; border-top: 1px solid var(--line); }
+@media (max-width: 400px) { .kv div { grid-template-columns: 1fr; gap: 2px; } }
+.kv dt { font-family: var(--f-mono); font-size: .8rem; color: var(--ink-2); padding-top: 2px; }
+.kv dd { margin: 0; font-weight: 700; }
+.stage-pill {
+  display: inline-flex; align-items: center; gap: 8px; font-family: var(--f-mono); font-weight: 500; font-size: .8rem;
+  background: var(--orange-soft); border: 1px solid var(--orange); border-radius: 999px; padding: 2px 10px;
+}
+.stage-pill::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--orange); }
+.summary .after { margin-top: 18px; color: var(--ink-2); }
+.demo-cta { margin-top: 26px; }
+.demo-cta .mono { display: block; margin-top: 12px; color: var(--ink-2); font-weight: 400; }
+
+/* ---------- Kanban ---------- */
+.board-wrap { position: relative; }
+.board {
+  display: grid; grid-auto-flow: column; grid-auto-columns: minmax(232px, 78%); gap: 12px;
+  overflow-x: auto; scroll-snap-type: x mandatory; padding: 4px 2px 18px; -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+}
+@media (min-width: 640px) { .board { grid-auto-columns: minmax(232px, 40%); } }
+@media (min-width: 1080px) { .board { grid-auto-flow: row; grid-template-columns: repeat(6, minmax(0, 1fr)); overflow: visible; } }
+.col { scroll-snap-align: start; background: var(--surface-2); border: 1px solid var(--line); border-radius: var(--radius-sm); padding: 12px; display: flex; flex-direction: column; gap: 10px; min-height: 240px; }
+.col-head { display: flex; justify-content: space-between; align-items: center; gap: 8px; font-family: var(--f-mono); font-weight: 500; font-size: .78rem; text-transform: uppercase; letter-spacing: .03em; color: var(--ink); padding: 2px 4px 6px; }
+.col-head .count { font-weight: 400; color: var(--ink-2); }
+.deal { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 11px 12px; font-size: .9rem; line-height: 1.35; }
+.deal strong { display: block; font-size: .95rem; }
+.deal .meta { display: flex; justify-content: space-between; gap: 8px; margin-top: 8px; font-family: var(--f-mono); font-size: .7rem; color: var(--ink-2); }
+.deal.active { border-color: var(--orange); box-shadow: 0 0 0 3px var(--orange-soft); }
+.deal.active .meta span:first-child { color: var(--ink); }
+.deal .ai { display: inline-flex; align-items: center; gap: 5px; }
+.deal .ai::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--blue); }
+.swipe-hint { font-family: var(--f-mono); font-size: .78rem; color: var(--ink-2); margin-top: 4px; }
+@media (min-width: 1080px) { .swipe-hint { display: none; } }
+.loss { margin-top: 36px; display: grid; gap: 14px; }
+@media (min-width: 900px) { .loss { grid-template-columns: auto 1fr; align-items: center; gap: 24px; } }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip { font-family: var(--f-mono); font-size: .8rem; background: var(--surface); border: 1px solid var(--line); border-radius: 999px; padding: 5px 12px; color: var(--ink); }
+
+/* ---------- Gerente ---------- */
+.split { display: grid; gap: 32px; align-items: start; }
+@media (min-width: 960px) { .split { grid-template-columns: 1fr 1fr; gap: 56px; } .split.rev > :first-child { order: 2; } }
+.feature-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 4px; }
+.feature-list li { display: grid; grid-template-columns: 34px 1fr; gap: 14px; padding: 18px 0; border-top: 1px solid var(--line); }
+.feature-list li:last-child { border-bottom: 1px solid var(--line); }
+.feature-list .fi { width: 34px; height: 34px; border-radius: 10px; background: var(--blue-soft); display: grid; place-items: center; }
+.feature-list .fi svg { width: 18px; height: 18px; stroke: var(--blue-ink); }
+.feature-list h3 { font-size: 1.1rem; margin-bottom: 4px; }
+.feature-list p { color: var(--ink-2); }
+
+.record { padding: 0; overflow: hidden; box-shadow: var(--shadow); }
+.record-top { padding: 20px 22px; border-bottom: 1px solid var(--line); display: flex; justify-content: space-between; gap: 12px; align-items: flex-start; flex-wrap: wrap; }
+.record-top strong { font-size: 1.15rem; display: block; }
+.record-top .mono { color: var(--ink-2); font-weight: 400; }
+.record-grid { display: grid; grid-template-columns: 1fr 1fr; border-bottom: 1px solid var(--line); }
+.record-grid > div { padding: 14px 22px; }
+.record-grid > div + div { border-left: 1px solid var(--line); }
+.record-grid .mono { display: block; color: var(--ink-2); font-weight: 400; font-size: .74rem; margin-bottom: 2px; }
+.record-grid strong { font-size: .98rem; }
+.next { margin: 16px 22px; padding: 12px 14px; border: 1px solid var(--orange); background: var(--orange-soft); border-radius: 10px; display: flex; gap: 10px; align-items: baseline; flex-wrap: wrap; }
+.next .mono { font-size: .74rem; }
+.timeline { list-style: none; margin: 0; padding: 4px 22px 22px; }
+.timeline li { display: grid; grid-template-columns: 4.6em 1fr; gap: 12px; padding: 8px 0; font-size: .93rem; color: var(--ink-2); position: relative; }
+.timeline time { font-family: var(--f-mono); font-size: .74rem; padding-top: 2px; color: var(--ink-2); }
+.timeline b { color: var(--ink); }
+.metrics { padding: 18px 22px 22px; border-top: 1px solid var(--line); }
+.metrics .mono { display: block; color: var(--ink-2); font-weight: 400; font-size: .74rem; margin-bottom: 12px; }
+.bar { display: grid; grid-template-columns: 6em 1fr; gap: 10px; align-items: center; font-size: .88rem; margin-top: 8px; }
+.bar span:last-child { height: 10px; border-radius: 6px; background: var(--surface-2); position: relative; overflow: hidden; }
+.bar span:last-child::after { content: ""; position: absolute; inset: 0 auto 0 0; width: var(--w); background: var(--blue); border-radius: 6px; }
+.metrics small { display: block; margin-top: 12px; font-family: var(--f-mono); font-size: .72rem; color: var(--ink-2); }
+
+/* ---------- Radar ---------- */
+.radar { padding: 0; overflow: hidden; box-shadow: var(--shadow); }
+.radar-head { padding: 18px 22px; border-bottom: 1px solid var(--line); display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.radar-head strong { font-size: 1.05rem; }
+.radar-row { display: grid; grid-template-columns: 12px 1fr auto; gap: 12px; padding: 14px 22px; align-items: center; border-bottom: 1px solid var(--line); }
+.radar-row:last-child { border-bottom: 0; }
+.radar-row .dot { width: 10px; height: 10px; border-radius: 50%; background: var(--line); }
+.radar-row.risk .dot { background: var(--orange); box-shadow: 0 0 0 4px var(--orange-soft); }
+.radar-row.warm .dot { background: var(--blue); }
+.radar-row strong { display: block; font-size: .98rem; }
+.radar-row .mono { color: var(--ink-2); font-weight: 400; font-size: .74rem; }
+.radar-row .state { font-family: var(--f-mono); font-size: .72rem; text-align: right; color: var(--ink-2); max-width: 11em; }
+
+/* ---------- Postventa ---------- */
+.after-sale { display: grid; gap: 24px; align-items: center; }
+@media (min-width: 900px) { .after-sale { grid-template-columns: 1.2fr .8fr; gap: 56px; } }
+.template-card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 18px; box-shadow: var(--shadow); }
+.template-card .mono { color: var(--ink-2); font-weight: 400; font-size: .74rem; display: flex; justify-content: space-between; gap: 10px; margin-bottom: 10px; }
+.template-card .msg { max-width: 100%; }
+
+/* ---------- Datos ---------- */
+.data-section { overflow: hidden; }
+.watermark { position: absolute; right: -80px; top: 50%; transform: translateY(-50%); width: 420px; height: auto; opacity: .06; pointer-events: none; }
+@media (max-width: 700px) { .watermark { width: 280px; right: -90px; top: 18%; transform: none; } }
+.data-grid { display: grid; gap: 16px; position: relative; }
+@media (min-width: 760px) { .data-grid { grid-template-columns: repeat(3, 1fr); gap: 20px; } }
+.data-grid .card h3 { font-size: 1.1rem; margin-bottom: 8px; }
+.data-grid .card p { color: var(--ink-2); }
+.data-grid .label { font-family: var(--f-mono); font-size: .75rem; color: var(--ink-2); display: block; margin-bottom: 14px; }
+.law { margin-top: 28px; padding: 22px 24px; border-left: 4px solid var(--orange); background: var(--surface); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; position: relative; max-width: 860px; }
+.law p { color: var(--ink-2); }
+.law strong { color: var(--ink); }
+
+/* ---------- Implementación ---------- */
+.timeline-impl { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; position: relative; }
+.timeline-impl li { display: grid; grid-template-columns: 28px 1fr; gap: 18px; padding-bottom: 32px; position: relative; }
+.timeline-impl li::before { content: ""; position: absolute; left: 13px; top: 28px; bottom: 0; width: 2px; background: var(--line); }
+.timeline-impl li:last-child::before { display: none; }
+.timeline-impl li:last-child { padding-bottom: 0; }
+.timeline-impl .node { width: 28px; height: 28px; border-radius: 50%; border: 2px solid var(--orange); background: var(--surface); position: relative; }
+.timeline-impl .node::after { content: ""; position: absolute; inset: 6px; border-radius: 50%; background: var(--orange); }
+.timeline-impl .when { font-family: var(--f-mono); font-size: .8rem; font-weight: 500; color: var(--ink-2); text-transform: uppercase; letter-spacing: .04em; }
+.timeline-impl h3 { margin: 4px 0 6px; }
+.timeline-impl p { color: var(--ink-2); }
+@media (min-width: 900px) {
+  .timeline-impl { grid-template-columns: repeat(3, 1fr); gap: 28px; }
+  .timeline-impl li { grid-template-columns: 1fr; padding-bottom: 0; }
+  .timeline-impl li::before { left: 28px; right: -28px; top: 13px; bottom: auto; width: auto; height: 2px; }
+}
+
+/* ---------- Oferta ---------- */
+.offer {
+  background: var(--surface); border: 2px solid var(--blue); border-radius: 24px; padding: 32px 24px;
+  display: grid; gap: 28px; box-shadow: var(--shadow); position: relative; overflow: hidden;
+}
+@media (min-width: 900px) { .offer { grid-template-columns: 1.1fr .9fr; padding: 52px; gap: 48px; align-items: center; } }
+.offer h2 { margin-bottom: 16px; }
+.offer .lead { margin-bottom: 26px; }
+.checks { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; }
+.checks li { display: grid; grid-template-columns: 24px 1fr; gap: 12px; }
+.checks li::before { content: ""; width: 22px; height: 22px; margin-top: 2px; border-radius: 50%; background: var(--orange-soft) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23c24f00' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 12.5l4 4 8-9'/%3E%3C/svg%3E") center / 14px no-repeat; border: 1px solid var(--orange); }
+.offer-note { margin-top: 18px; font-size: .92rem; color: var(--ink-2); }
+
+/* ---------- FAQ ---------- */
+.faq { max-width: 860px; }
+.faq details { border-top: 1px solid var(--line); }
+.faq details:last-child { border-bottom: 1px solid var(--line); }
+.faq summary {
+  list-style: none; cursor: pointer; padding: 22px 48px 22px 0; position: relative;
+  font-family: var(--f-title); font-weight: 800; font-size: 1.18rem; line-height: 1.3;
+}
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after {
+  content: ""; position: absolute; right: 6px; top: 50%; width: 26px; height: 26px; margin-top: -13px;
+  border-radius: 50%; border: 2px solid var(--blue-ink);
+  background:
+    linear-gradient(var(--blue-ink), var(--blue-ink)) center / 12px 2px no-repeat,
+    linear-gradient(var(--blue-ink), var(--blue-ink)) center / 2px 12px no-repeat;
+  transition: transform .2s ease;
+}
+.faq details[open] summary::after { transform: rotate(45deg); }
+.faq .answer { padding: 0 0 24px; color: var(--ink-2); max-width: 68ch; }
+.faq .answer p + p { margin-top: 10px; }
+
+/* ---------- CTA final ---------- */
+.final { text-align: left; overflow: hidden; }
+.final-box > *:not(.final-iso) { position: relative; }
+.final-box { background: var(--ink); color: #fff; border-radius: 28px; padding: 44px 20px; position: relative; overflow: hidden; }
+@media (min-width: 900px) { .final-box { padding: 72px 64px; } }
+.final-box h2 { color: #fff; max-width: 20ch; }
+.final-box p { color: #d3ddf0; margin: 18px 0 30px; max-width: 54ch; font-size: 1.125rem; }
+.final-box .btn-secondary { background: transparent; color: #fff; border-color: #fff; }
+.final-box .btn-secondary:hover { background: rgba(255,255,255,.1); color: #fff; }
+.final-iso { position: absolute; right: -40px; bottom: -60px; width: 260px; height: auto; opacity: .12; pointer-events: none; }
+@media (min-width: 900px) { .final-iso { width: 380px; right: 24px; bottom: -70px; } }
+
+/* ---------- Pie ---------- */
+.site-footer { padding: 56px 0 120px; border-top: 1px solid var(--line); margin-top: var(--section); }
+@media (min-width: 900px) { .site-footer { padding-bottom: 56px; } }
+.footer-grid { display: grid; gap: 22px; }
+@media (min-width: 900px) { .footer-grid { grid-template-columns: 1fr auto; align-items: end; } }
+.site-footer .brand { --logo-h: 30px; }
+.site-footer p { color: var(--ink-2); font-size: .95rem; max-width: 60ch; }
+.site-footer .mono { font-weight: 400; color: var(--ink-2); display: block; margin-top: 10px; }
+.footer-links { display: flex; flex-wrap: wrap; gap: 10px 22px; font-weight: 700; }
+
+/* ---------- Botón flotante (móvil) ---------- */
+.fab {
+  position: fixed; right: 16px; bottom: calc(16px + env(safe-area-inset-bottom)); z-index: 50;
+  display: inline-flex; align-items: center; gap: 10px;
+  background: var(--blue); color: #fff; text-decoration: none; font-weight: 700; font-size: 1.125rem;
+  padding: 14px 20px 14px 16px; border-radius: 999px; box-shadow: 0 12px 30px -10px rgba(12,26,58,.55);
+  transform: translateY(140%); transition: transform .25s ease;
+}
+.fab svg { width: 26px; height: 26px; }
+.fab.show { transform: none; }
+.fab:hover { color: #fff; background: var(--blue-ink); }
+@media (min-width: 900px) { .fab { display: none; } }
+.no-js .fab { transform: none; }
+
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+.skip { position: absolute; left: 12px; top: -60px; background: var(--ink); color: #fff; padding: 10px 14px; border-radius: 8px; z-index: 100; }
+.skip:focus { top: 12px; color: #fff; }
+</style>
+</head>
+<body class="no-js">
+<script>document.body.classList.remove('no-js');document.documentElement.classList.add('js');</script>
+<a class="skip" href="#contenido">Saltar al contenido</a>
+
+<!-- Ícono de WhatsApp reutilizable -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91A9.86 9.86 0 0 0 12.04 2Zm0 18.15h-.01a8.23 8.23 0 0 1-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.21 8.21 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24a8.24 8.24 0 0 1 8.24 8.25c0 4.54-3.7 8.23-8.23 8.23Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.43-.06-.13-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.29Z"/></symbol>
+</svg>
+
+<header class="site-header" id="top">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Tempiax, volver al inicio">
+      <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="147 2338 5671 1312"><g transform="translate(0 6000) scale(1 -1)"><path fill="#3873fb" d="M448 3627 c-9 -2 -18 -5 -20 -6 -3 -1 -10 -3 -17 -6 -6 -2 -14 -5 -17 -6 -3 -2 -12 -5 -19 -6 -7 -2 -15 -5 -17 -5 -2 -1 -10 -4 -17 -6 -8 -2 -16 -4 -19 -6 -3 -2 -10 -4 -16 -6 -5 -2 -15 -5 -22 -7 -22 -9 -20 -2 -21 -80 -1 -70 0 -69 -7 -73 -2 -1 -6 -2 -49 -2 -57 -1 -58 -1 -59 -17 -2 -18 -1 -196 2 -200 4 -9 3 -8 55 -9 52 -1 51 0 55 -9 2 -3 3 -4 3 -165 1 -179 1 -173 7 -196 2 -6 4 -15 5 -22 1 -6 3 -15 5 -20 2 -4 5 -14 7 -21 4 -16 10 -27 28 -54 17 -27 56 -54 86 -62 6 -2 16 -5 22 -6 12 -5 16 -5 37 -8 8 0 21 -2 28 -3 18 -3 64 -3 87 0 9 1 21 2 28 3 27 3 25 -9 25 108 0 121 4 107 -40 107 -87 0 -106 14 -108 81 -1 30 -1 240 0 248 3 19 0 18 76 19 69 1 66 0 70 8 3 7 2 206 -1 211 -5 7 -6 7 -71 7 -63 0 -64 0 -70 5 -5 6 -5 6 -5 104 0 116 2 109 -31 100z M5029 3523 c-92 -1 -88 0 -95 -7 -8 -8 -4 -22 10 -40 4 -5 11 -15 15 -21 4 -7 12 -17 17 -23 5 -6 11 -15 14 -20 3 -5 9 -13 14 -19 5 -6 12 -16 17 -23 4 -7 10 -16 13 -19 4 -4 10 -13 15 -20 5 -8 12 -18 17 -23 4 -6 11 -16 16 -23 5 -8 12 -18 16 -22 4 -5 10 -14 13 -19 12 -19 26 -31 41 -34 8 -2 436 -1 444 1 15 3 25 11 39 32 5 7 11 17 14 21 4 3 10 12 14 18 4 6 11 16 16 22 4 6 10 14 13 18 2 4 10 14 16 23 6 9 14 19 17 24 3 4 9 13 14 19 5 6 11 15 14 20 3 4 9 13 14 19 5 6 12 16 16 22 4 6 12 16 17 24 22 30 22 44 1 49 -9 2 -192 2 -208 0 -34 -4 -46 -14 -77 -63 -8 -12 -17 -26 -20 -30 -4 -5 -9 -14 -13 -19 -3 -5 -8 -14 -12 -19 -4 -5 -9 -12 -11 -16 -4 -6 -25 -38 -37 -55 -3 -5 -11 -18 -19 -29 -27 -41 -30 -42 -50 -16 -6 7 -12 17 -16 22 -3 5 -9 15 -13 21 -5 6 -12 16 -15 22 -3 6 -9 13 -11 17 -3 3 -9 12 -13 18 -4 7 -10 16 -13 20 -5 7 -19 28 -28 43 -2 4 -7 11 -11 16 -3 5 -8 13 -11 17 -24 41 -47 54 -96 53 -8 0 -52 -1 -98 -1z M2374 3440 c-23 -1 -32 -2 -45 -7 -6 -1 -15 -4 -21 -5 -13 -4 -34 -13 -42 -18 -4 -3 -9 -6 -12 -8 -13 -7 -33 -25 -48 -43 -14 -17 -17 -17 -31 2 -22 28 -62 58 -89 66 -5 1 -15 4 -22 6 -28 9 -98 10 -125 1 -6 -1 -16 -4 -23 -6 -30 -7 -63 -28 -86 -55 -15 -18 -19 -15 -20 16 -1 33 11 30 -106 30 -107 0 -101 0 -106 -9 -4 -5 -4 -768 0 -773 5 -7 -1 -7 105 -7 91 0 96 0 100 2 8 4 7 -18 7 235 0 251 0 240 7 263 2 7 5 16 6 20 7 24 27 48 51 63 17 10 65 12 90 2 17 -6 35 -24 46 -47 17 -34 16 -23 16 -310 0 -244 -1 -221 8 -225 5 -3 189 -4 197 -1 11 3 9 -25 10 237 1 266 0 249 9 272 3 6 6 14 7 18 10 28 40 54 68 60 57 12 101 -10 119 -60 1 -5 4 -11 5 -14 7 -14 6 4 7 -263 1 -243 1 -243 3 -246 5 -6 -2 -6 105 -6 108 1 101 0 104 9 2 5 3 496 1 517 0 7 -1 18 -2 27 -2 19 -3 30 -7 40 -2 5 -4 13 -5 19 -2 5 -4 12 -6 16 -2 4 -5 12 -7 17 -5 14 -11 27 -18 38 -4 5 -9 14 -12 19 -14 22 -53 60 -70 69 -4 2 -10 6 -14 8 -12 8 -31 16 -47 20 -4 1 -11 3 -15 4 -10 4 -22 6 -34 6 -20 1 -41 2 -58 1z M3166 3438 c-5 0 -14 -2 -19 -4 -6 -2 -16 -4 -23 -6 -17 -4 -38 -12 -48 -18 -5 -3 -11 -7 -15 -9 -8 -4 -21 -14 -32 -25 -21 -20 -27 -17 -27 15 0 31 8 28 -106 29 -108 0 -107 0 -110 -12 -2 -9 -1 -1046 2 -1050 4 -8 -2 -7 105 -7 96 0 96 0 100 2 9 4 8 -14 9 179 1 188 0 175 7 177 4 2 6 0 15 -7 19 -17 33 -27 47 -34 4 -2 11 -5 15 -8 13 -8 34 -15 57 -18 8 -1 21 -3 30 -5 23 -5 57 -5 84 0 10 2 24 5 31 6 14 2 35 9 46 14 35 17 45 23 74 45 38 28 84 88 107 137 4 9 10 21 13 27 2 6 5 14 6 16 1 2 3 9 4 16 4 12 5 17 8 31 0 5 2 14 4 21 5 16 5 19 6 42 4 52 1 107 -5 130 -3 9 -4 14 -7 31 0 6 -3 16 -5 22 -2 6 -4 14 -5 17 0 3 -3 10 -6 16 -3 5 -6 12 -7 16 -11 25 -19 39 -42 73 -10 15 -47 55 -65 70 -6 5 -14 11 -18 15 -7 6 -17 12 -45 28 -15 8 -32 14 -46 17 -6 2 -16 5 -23 7 -21 6 -86 9 -116 4z m36 -217 c21 -3 32 -6 41 -11 4 -3 10 -6 13 -8 25 -13 52 -42 68 -74 22 -44 24 -131 3 -177 -17 -38 -51 -72 -82 -84 -2 -1 -8 -4 -14 -6 -24 -11 -88 -13 -111 -3 -59 24 -89 52 -105 102 -7 20 -8 21 -9 37 -5 38 -5 44 0 83 8 68 62 128 125 139 32 6 44 6 71 2z M1071 3416 c-19 -1 -24 -2 -36 -6 -4 -2 -13 -4 -20 -5 -65 -14 -134 -57 -179 -110 -5 -5 -11 -13 -15 -17 -3 -4 -9 -12 -13 -17 -3 -6 -10 -15 -14 -21 -7 -12 -12 -21 -16 -32 -2 -3 -6 -12 -9 -19 -10 -24 -12 -28 -14 -38 -1 -5 -3 -15 -5 -21 -3 -14 -5 -21 -6 -36 -1 -7 -2 -21 -4 -30 -3 -25 -4 -58 0 -78 1 -8 2 -19 3 -25 2 -24 4 -36 8 -50 2 -9 4 -18 5 -22 3 -12 24 -60 33 -75 8 -13 24 -37 31 -45 26 -32 39 -45 71 -69 33 -26 87 -51 123 -57 7 -2 17 -4 21 -6 15 -4 19 -5 62 -8 18 -1 60 -1 77 0 40 3 39 3 54 7 9 3 20 5 26 6 11 2 36 11 46 15 4 2 16 9 28 14 16 9 23 13 32 20 6 4 14 11 18 14 16 12 59 57 64 68 3 7 -1 12 -17 22 -6 4 -16 10 -23 15 -7 4 -16 9 -20 12 -4 2 -15 8 -25 14 -9 6 -20 13 -25 15 -4 2 -10 6 -14 9 -31 23 -41 23 -65 4 -16 -13 -23 -16 -63 -30 -23 -9 -94 -7 -116 2 -4 2 -12 4 -18 6 -35 10 -63 35 -80 70 -5 11 -5 17 1 20 1 0 109 1 244 1 273 1 250 0 256 11 8 16 8 128 0 165 -1 5 -3 16 -5 24 -2 13 -4 18 -7 25 -2 5 -6 14 -8 20 -9 26 -18 45 -30 65 -3 4 -7 11 -10 16 -3 5 -8 12 -10 15 -3 3 -9 10 -15 17 -33 39 -70 69 -108 89 -5 2 -11 5 -13 7 -5 3 -39 14 -52 17 -5 1 -12 3 -16 5 -14 5 -21 6 -41 8 -23 1 -67 1 -91 -1z m80 -199 c14 -2 28 -7 47 -17 22 -11 43 -34 58 -64 11 -23 12 -28 5 -33 -6 -3 -284 -3 -289 1 -7 5 -6 13 4 33 20 40 49 64 94 77 11 4 61 5 81 3z M5189 3098 c-5 -3 -12 -13 -20 -26 -3 -7 -8 -15 -10 -19 -3 -4 -6 -10 -9 -13 -2 -4 -5 -10 -7 -12 -1 -3 -4 -8 -6 -12 -2 -4 -7 -12 -11 -18 -4 -7 -11 -20 -17 -29 -5 -10 -11 -22 -14 -26 -3 -5 -10 -17 -16 -26 -5 -10 -12 -23 -16 -28 -3 -5 -10 -17 -14 -26 -5 -9 -12 -20 -15 -25 -3 -5 -8 -12 -10 -16 -9 -17 -19 -34 -21 -38 -2 -2 -6 -9 -10 -16 -3 -7 -9 -17 -12 -22 -12 -19 -17 -27 -19 -33 -2 -3 -7 -12 -11 -19 -28 -44 -28 -61 0 -66 15 -3 146 -2 152 1 6 3 10 7 11 13 3 20 6 29 20 55 13 22 40 49 73 73 11 8 31 24 57 45 66 54 80 114 45 185 -8 16 -35 42 -75 72 -6 5 -15 12 -20 16 -13 11 -18 13 -25 10z M5545 3096 c-6 -4 -52 -40 -66 -52 -22 -18 -44 -51 -50 -74 -18 -62 1 -116 54 -155 6 -4 15 -12 20 -16 5 -3 14 -11 21 -16 64 -45 101 -89 107 -125 5 -35 -1 -33 117 -31 56 1 58 1 64 8 10 11 6 25 -20 69 -6 10 -14 23 -17 30 -4 6 -8 14 -10 17 -4 5 -14 22 -20 35 -3 5 -8 12 -11 17 -2 4 -7 12 -10 18 -12 21 -15 26 -22 38 -4 6 -9 14 -11 18 -4 9 -15 26 -19 33 -2 3 -7 11 -10 17 -3 6 -11 19 -17 30 -7 11 -13 23 -15 26 -2 4 -7 13 -12 21 -5 8 -12 21 -16 28 -4 7 -10 17 -12 21 -3 4 -9 15 -14 23 -12 23 -19 27 -31 20z"/><path fill="#fe6700" d="M3779 3660 c-50 -6 -97 -51 -105 -99 -6 -33 -4 -56 8 -82 11 -25 38 -52 63 -62 4 -2 11 -5 15 -7 14 -7 57 -9 71 -3 3 2 11 5 17 8 49 21 79 65 79 118 1 79 -67 137 -148 127z M4320 3438 c-6 0 -17 -3 -25 -5 -7 -2 -18 -5 -23 -6 -20 -5 -33 -10 -74 -34 -4 -2 -10 -7 -14 -10 -4 -4 -12 -10 -18 -15 -13 -10 -37 -34 -46 -45 -3 -5 -10 -14 -15 -20 -5 -6 -12 -17 -16 -23 -3 -6 -8 -13 -10 -15 -7 -10 -16 -28 -30 -61 -9 -22 -10 -26 -13 -37 -1 -6 -3 -17 -5 -23 -2 -6 -3 -15 -4 -19 -1 -5 -2 -14 -3 -21 0 -7 -3 -18 -4 -25 -6 -24 -6 -84 0 -108 1 -7 3 -19 4 -28 3 -22 5 -34 7 -42 1 -3 3 -12 5 -20 2 -8 4 -18 6 -22 6 -16 8 -21 14 -32 11 -26 17 -37 21 -43 3 -4 8 -11 11 -17 3 -6 10 -15 14 -21 4 -5 11 -14 16 -20 10 -15 42 -46 55 -56 5 -3 13 -9 17 -12 21 -16 60 -35 90 -42 33 -9 33 -8 81 -8 51 0 52 0 99 12 25 6 69 34 96 60 17 17 19 14 20 -19 1 -37 -11 -33 106 -33 107 0 99 -1 104 9 3 6 4 765 1 772 -5 9 3 8 -104 9 -119 0 -106 4 -107 -31 -1 -38 -2 -39 -26 -18 -19 18 -27 24 -37 30 -5 3 -12 7 -16 10 -10 7 -35 17 -48 19 -6 1 -16 4 -22 5 -21 6 -78 9 -107 5z m98 -222 c52 -3 109 -40 132 -86 5 -9 11 -27 14 -37 1 -6 4 -16 6 -22 7 -25 7 -70 1 -92 -3 -7 -5 -18 -7 -26 -5 -22 -14 -40 -34 -66 -6 -9 -13 -15 -27 -26 -36 -28 -107 -40 -147 -25 -4 2 -12 5 -16 6 -36 11 -67 40 -91 89 -18 36 -21 128 -4 173 12 32 34 62 60 81 18 14 60 30 82 31 7 0 13 1 15 1 1 0 8 0 16 -1z M3704 3341 c-6 -2 -11 -8 -13 -13 -2 -7 -1 -689 1 -694 6 -11 5 -11 114 -11 99 1 93 0 98 7 4 5 4 -1 4 356 -1 387 0 348 -9 353 -6 3 -188 4 -195 2z M5489 3193 c-15 -2 -36 -9 -46 -15 -2 -1 -12 -6 -21 -11 -10 -5 -21 -11 -24 -13 -10 -7 -31 -17 -40 -20 -5 -1 -13 -4 -19 -6 -12 -4 -27 -5 -52 -4 -39 1 -39 -5 4 -42 25 -22 45 -45 54 -66 3 -6 7 -15 10 -20 5 -12 6 -15 9 -34 9 -67 -14 -118 -75 -170 -38 -32 -53 -48 -72 -72 -17 -25 -17 -25 -22 -37 -11 -29 -11 -46 0 -52 4 -2 348 -3 356 -1 14 4 12 25 -8 65 -11 22 -41 55 -77 87 -15 14 -30 29 -38 41 -4 5 -10 13 -13 18 -8 11 -14 21 -19 36 -2 5 -5 13 -7 17 -8 21 -9 65 -2 89 5 17 18 45 26 55 18 23 27 33 52 55 60 53 85 85 76 96 -5 5 -27 6 -52 4z"/></g></svg>
+    </a>
+    <nav aria-label="Secciones">
+      <a href="#como-funciona">Cómo funciona</a>
+      <a href="#demo">Demo</a>
+      <a href="#piloto">Piloto</a>
+      <a href="#preguntas">Preguntas</a>
+    </nav>
+    <a class="btn btn-primary header-cta" data-wa="ventas" data-msg="Hola, quiero hablar sobre el agente de IA para mi concesionaria." href="https://wa.me/">
+      <svg aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp
+    </a>
+  </div>
+</header>
+
+<main id="contenido">
+
+<!-- 1. HERO -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="status-chip"><span class="pulse" aria-hidden="true"></span>Agente activo · 23:01</div>
+      <h1>Cada consulta por WhatsApp se responde en segundos, también a las 11 de la noche.</h1>
+      <p class="lead">Un agente de IA atiende, califica y coordina el test drive. El vendedor recibe solo a los clientes listos para avanzar, con la conversación resumida, y todo queda en un CRM que es de tu concesionaria.</p>
+      <div class="btn-row">
+        <a class="btn btn-primary" data-wa="ventas" data-msg="Hola, quiero ver una demo del agente de IA con los datos de mi concesionaria." href="https://wa.me/">Ver una demo con mi concesionaria</a>
+        <a class="btn btn-secondary" data-wa="ventas" data-msg="Hola, tengo una concesionaria y quiero hacer unas preguntas sobre el agente de IA." href="https://wa.me/"><svg aria-hidden="true"><use href="#i-wa"/></svg>Hablar por WhatsApp</a>
+      </div>
+      <p class="micro"><span>Instalación en <span class="ph">[X]</span>&nbsp;días</span><span>Tus datos en tu servidor</span><span>WhatsApp oficial</span></p>
+    </div>
+
+    <div class="hero-visual" aria-hidden="true">
+      <div class="notif-stack">
+        <div class="notif">
+          <div class="ico"><svg viewBox="0 0 24 24" style="color:#1f56d8"><use href="#i-wa"/></svg></div>
+          <div class="top"><span>Consulta nueva</span><time>23:01</time></div>
+          <p>«Hola, vi la Hilux SRV en la web, ¿sigue disponible?»</p>
+        </div>
+        <div class="notif">
+          <div class="ico iso"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="71 68 3957 4017"><g transform="translate(0 4157) scale(1 -1)"><path fill="#3873fb" d="M330 4088 c-97 -3 -187 -16 -220 -31 -44 -21 -51 -74 -19 -135 11 -22 26 -44 59 -85 60 -77 91 -120 182 -249 72 -103 104 -147 191 -266 161 -218 207 -283 288 -404 163 -244 208 -269 465 -253 46 3 86 5 133 7 43 2 272 2 347 0 165 -3 406 -4 624 -1 114 2 338 2 388 0 22 0 59 -2 81 -2 83 -3 112 -3 148 1 110 11 149 40 234 175 28 43 48 73 102 144 42 56 81 110 143 198 91 127 124 174 185 259 238 330 316 439 336 472 34 56 36 92 7 125 -38 41 -127 52 -360 42 -122 -4 -245 -4 -380 1 -202 7 -291 -4 -375 -46 -68 -34 -95 -64 -185 -203 -29 -44 -63 -95 -120 -181 -221 -334 -276 -418 -408 -618 -51 -78 -59 -89 -77 -108 -36 -35 -68 -34 -108 6 -17 18 -27 33 -63 91 -34 56 -78 122 -148 225 -43 62 -119 176 -166 249 -275 422 -311 472 -360 513 -72 60 -174 78 -379 71 -129 -5 -157 -5 -312 0 -118 4 -177 5 -233 3z M2839 2199 c-29 -4 -59 -24 -125 -83 -45 -40 -52 -46 -104 -86 -73 -57 -95 -76 -135 -115 -96 -94 -163 -194 -195 -293 -69 -216 9 -481 195 -664 60 -58 117 -102 251 -193 310 -210 377 -296 477 -612 25 -79 60 -90 240 -75 78 6 120 7 195 7 59 0 85 0 162 -4 108 -4 152 2 187 27 35 25 48 59 37 98 -12 39 -85 183 -158 312 -37 66 -69 119 -143 242 -117 193 -151 252 -310 533 -112 198 -140 247 -225 392 -97 165 -132 227 -190 334 -34 63 -46 85 -55 100 -37 61 -69 85 -104 80z M1241 2198 c-35 -5 -59 -34 -102 -119 -36 -73 -52 -102 -117 -210 -45 -76 -104 -176 -151 -258 -34 -58 -91 -158 -148 -258 -182 -320 -212 -372 -338 -583 -158 -264 -237 -408 -296 -539 -27 -59 -23 -90 14 -117 41 -32 90 -38 252 -31 128 5 212 4 304 -5 122 -11 170 -7 204 16 17 12 26 28 42 78 64 198 134 318 246 422 54 49 99 84 225 172 139 98 193 140 252 199 193 191 274 457 205 667 -43 130 -141 245 -334 395 -62 47 -74 57 -112 89 -56 48 -78 64 -105 75 -14 6 -32 9 -41 7z"/><path fill="#fe6700" d="M2647 2618 c-95 -4 -202 -32 -313 -83 -54 -24 -88 -42 -190 -101 -225 -128 -287 -146 -463 -130 -109 9 -160 2 -167 -23 -6 -22 39 -73 123 -140 87 -71 135 -116 188 -180 156 -192 216 -417 171 -642 -34 -169 -116 -297 -295 -462 -27 -24 -51 -45 -102 -91 -224 -196 -309 -306 -362 -465 -35 -105 -38 -165 -8 -187 28 -19 48 -21 321 -22 93 0 196 -1 230 -2 89 -2 350 -2 436 0 87 2 262 2 305 0 17 -1 50 -2 74 -4 146 -8 216 0 260 30 47 32 45 75 -12 205 -67 152 -126 227 -312 403 -195 183 -280 282 -346 403 -121 224 -125 494 -10 700 63 112 146 206 330 369 165 148 227 214 280 302 39 65 43 89 18 102 -24 12 -95 21 -156 18z"/></g></svg></div>
+          <div class="top"><span>Agente respondió</span><time>23:01</time></div>
+          <p>Stock confirmado, ofreció financiación y horarios de test drive.</p>
+        </div>
+        <div class="notif active">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#1f56d8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg></div>
+          <div class="top"><span>Asignado a Martín</span><time>23:04</time></div>
+          <p>Calificado: entrega una Ranger 2018 como parte de pago.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 2. PROBLEMA -->
+<section class="section" aria-labelledby="t-problema">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow">Lo que pasa hoy</p>
+      <h2 id="t-problema">Las ventas que se caen antes de que alguien las vea</h2>
+    </div>
+    <div class="grid-4">
+      <article class="card problem">
+        <span class="tag">22:40 · sin respuesta</span>
+        <h3>Preguntaron el precio a las 22:40 y nadie contestó.</h3>
+        <p>Al día siguiente, cuando el vendedor abrió el chat, el cliente ya había hablado con otra agencia.</p>
+      </article>
+      <article class="card problem">
+        <span class="tag">cartera · celular personal</span>
+        <h3>Cada vendedor tiene su cartera en su celular.</h3>
+        <p>Si se va, se lleva los contactos, y vos nunca viste qué se habló con cada cliente.</p>
+      </article>
+      <article class="card problem">
+        <span class="tag">5 bandejas · 0 totales</span>
+        <h3>Las consultas llegan por Mercado Libre, Instagram, la web y el salón, y terminan en cinco lugares distintos.</h3>
+        <p>Nadie sabe cuántas entraron esta semana, ni cuántas quedaron sin atender.</p>
+      </article>
+      <article class="card problem">
+        <span class="tag">«lo pienso» · sin seguimiento</span>
+        <h3>El cliente dijo «lo pienso» y nadie volvió a escribirle.</h3>
+        <p>Ya sabía qué modelo quería y cómo pensaba pagarlo, y solo faltaba que alguien lo llamara a los tres días.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 3. CÓMO FUNCIONA -->
+<section class="section band" id="como-funciona" aria-labelledby="t-como">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow">Cómo funciona</p>
+      <h2 id="t-como">De la consulta al vendedor, en tres pasos</h2>
+    </div>
+    <ol class="steps">
+      <li class="card step">
+        <span class="num">01</span>
+        <h3>Entra la consulta</h3>
+        <p>Llega por WhatsApp, por el formulario de tu web o desde un anuncio, y queda registrada en el mismo lugar.</p>
+        <p class="note">Las consultas de portales como Mercado Libre se suman con una conexión automática (webhook, Zapier o n8n), según lo que permita cada portal.</p>
+      </li>
+      <li class="card step">
+        <span class="num">02</span>
+        <h3>El agente responde y califica</h3>
+        <p>Contesta con tu stock y tus condiciones, pregunta lo que tu vendedor necesitaría saber (modelo, si entrega usado, forma de pago y urgencia) y propone un test drive.</p>
+      </li>
+      <li class="card step">
+        <span class="num">03</span>
+        <h3>El vendedor toma la posta</h3>
+        <p>Recibe al cliente calificado con el resumen de la charla y entra en la conversación cuando quiere. El agente pasa la conversación cuando el cliente está listo o cuando le falta un dato.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- 4. DEMO DE CONVERSACIÓN -->
+<section class="section band" id="demo" aria-labelledby="t-demo" style="padding-top:0">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow">Demo</p>
+      <h2 id="t-demo">Así atiende el agente una consulta de las 23:01</h2>
+      <p class="lead">Una conversación de ejemplo, de punta a punta, y lo que le llega al vendedor cuando termina.</p>
+    </div>
+    <div class="demo-grid">
+      <div class="phone" role="img" aria-label="Conversación de WhatsApp entre un cliente y el agente de la concesionaria">
+        <div class="chat-head">
+          <div class="avatar" aria-hidden="true"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="71 68 3957 4017"><g transform="translate(0 4157) scale(1 -1)"><path fill="#3873fb" d="M330 4088 c-97 -3 -187 -16 -220 -31 -44 -21 -51 -74 -19 -135 11 -22 26 -44 59 -85 60 -77 91 -120 182 -249 72 -103 104 -147 191 -266 161 -218 207 -283 288 -404 163 -244 208 -269 465 -253 46 3 86 5 133 7 43 2 272 2 347 0 165 -3 406 -4 624 -1 114 2 338 2 388 0 22 0 59 -2 81 -2 83 -3 112 -3 148 1 110 11 149 40 234 175 28 43 48 73 102 144 42 56 81 110 143 198 91 127 124 174 185 259 238 330 316 439 336 472 34 56 36 92 7 125 -38 41 -127 52 -360 42 -122 -4 -245 -4 -380 1 -202 7 -291 -4 -375 -46 -68 -34 -95 -64 -185 -203 -29 -44 -63 -95 -120 -181 -221 -334 -276 -418 -408 -618 -51 -78 -59 -89 -77 -108 -36 -35 -68 -34 -108 6 -17 18 -27 33 -63 91 -34 56 -78 122 -148 225 -43 62 -119 176 -166 249 -275 422 -311 472 -360 513 -72 60 -174 78 -379 71 -129 -5 -157 -5 -312 0 -118 4 -177 5 -233 3z M2839 2199 c-29 -4 -59 -24 -125 -83 -45 -40 -52 -46 -104 -86 -73 -57 -95 -76 -135 -115 -96 -94 -163 -194 -195 -293 -69 -216 9 -481 195 -664 60 -58 117 -102 251 -193 310 -210 377 -296 477 -612 25 -79 60 -90 240 -75 78 6 120 7 195 7 59 0 85 0 162 -4 108 -4 152 2 187 27 35 25 48 59 37 98 -12 39 -85 183 -158 312 -37 66 -69 119 -143 242 -117 193 -151 252 -310 533 -112 198 -140 247 -225 392 -97 165 -132 227 -190 334 -34 63 -46 85 -55 100 -37 61 -69 85 -104 80z M1241 2198 c-35 -5 -59 -34 -102 -119 -36 -73 -52 -102 -117 -210 -45 -76 -104 -176 -151 -258 -34 -58 -91 -158 -148 -258 -182 -320 -212 -372 -338 -583 -158 -264 -237 -408 -296 -539 -27 -59 -23 -90 14 -117 41 -32 90 -38 252 -31 128 5 212 4 304 -5 122 -11 170 -7 204 16 17 12 26 28 42 78 64 198 134 318 246 422 54 49 99 84 225 172 139 98 193 140 252 199 193 191 274 457 205 667 -43 130 -141 245 -334 395 -62 47 -74 57 -112 89 -56 48 -78 64 -105 75 -14 6 -32 9 -41 7z"/><path fill="#fe6700" d="M2647 2618 c-95 -4 -202 -32 -313 -83 -54 -24 -88 -42 -190 -101 -225 -128 -287 -146 -463 -130 -109 9 -160 2 -167 -23 -6 -22 39 -73 123 -140 87 -71 135 -116 188 -180 156 -192 216 -417 171 -642 -34 -169 -116 -297 -295 -462 -27 -24 -51 -45 -102 -91 -224 -196 -309 -306 -362 -465 -35 -105 -38 -165 -8 -187 28 -19 48 -21 321 -22 93 0 196 -1 230 -2 89 -2 350 -2 436 0 87 2 262 2 305 0 17 -1 50 -2 74 -4 146 -8 216 0 260 30 47 32 45 75 -12 205 -67 152 -126 227 -312 403 -195 183 -280 282 -346 403 -121 224 -125 494 -10 700 63 112 146 206 330 369 165 148 227 214 280 302 39 65 43 89 18 102 -24 12 -95 21 -156 18z"/></g></svg></div>
+          <div>
+            <strong>Tu concesionaria</strong>
+            <span class="mono">agente IA · en línea</span>
+          </div>
+        </div>
+        <div class="chat-body" id="chat" aria-hidden="true">
+          <span class="day">HOY</span>
+          <div class="msg in step-item">Hola, vi la Hilux SRV en la web, ¿sigue disponible?<time>23:01</time></div>
+          <div class="typing step-item" data-typing><i></i><i></i><i></i></div>
+          <div class="msg out step-item"><span class="who">Agente</span>Hola, sí, tenemos dos unidades 2024. ¿Te paso precio y opciones de financiación, o preferís venir a verla? Esta semana tenemos horarios de test drive el jueves y el viernes.<time>23:01</time></div>
+          <div class="typing left step-item" data-typing><i></i><i></i><i></i></div>
+          <div class="msg in step-item">Tengo una Ranger 2018 para entregar.<time>23:03</time></div>
+          <div class="typing step-item" data-typing><i></i><i></i><i></i></div>
+          <div class="msg out step-item"><span class="who">Agente</span>Perfecto, la tomamos como parte de pago. Te paso con Martín, del equipo comercial, para que la tase y te arme la propuesta.<time>23:03</time></div>
+          <div class="sys step-item">23:04 · Conversación asignada a Martín R. · Comercial</div>
+        </div>
+      </div>
+
+      <div>
+        <div class="card summary">
+          <p class="eyebrow">Lo que recibe Martín</p>
+          <h3>Un cliente calificado, con el resumen listo antes de escribir la primera palabra</h3>
+          <dl class="kv">
+            <div><dt>Interés</dt><dd>Toyota Hilux SRV 2024</dd></div>
+            <div><dt>Usado</dt><dd>Ranger 2018, para tasar</dd></div>
+            <div><dt>Forma de pago</dt><dd>Usado más financiación, a confirmar</dd></div>
+            <div><dt>Test drive</dt><dd>Le interesa, ofrecidos jueves y viernes</dd></div>
+            <div><dt>Etapa</dt><dd><span class="stage-pill">Calificado</span></dd></div>
+            <div><dt>Próxima acción</dt><dd>Tasar la Ranger y enviar propuesta</dd></div>
+          </dl>
+          <p class="after">El traspaso queda registrado con hora y responsable, y si Martín no responde, la conversación sigue visible para el gerente.</p>
+        </div>
+        <div class="demo-cta">
+          <a class="btn btn-primary" data-wa="demo" data-msg="Hola, vi la Hilux SRV en la web, ¿sigue disponible?" href="https://wa.me/"><svg aria-hidden="true"><use href="#i-wa"/></svg>Escribile al agente</a>
+          <span class="mono">Agente de prueba con stock de ejemplo · <span class="ph">[NÚMERO DE WHATSAPP DEMO]</span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5. EMBUDO -->
+<section class="section" aria-labelledby="t-embudo">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow">Embudo de concesionaria</p>
+      <h2 id="t-embudo">Tu proceso de venta, con tus palabras.</h2>
+      <p class="lead">Las etapas y sus nombres se configuran como los usa tu equipo, y el agente mueve a cada cliente de etapa según lo que pasa en la conversación, así ves en una pantalla dónde está cada operación.</p>
+    </div>
+    <div class="board-wrap">
+      <div class="board" tabindex="0" aria-label="Tablero de ventas de ejemplo con seis etapas">
+        <div class="col">
+          <div class="col-head"><span>Consulta</span><span class="count">3</span></div>
+          <div class="deal"><strong>Carla P.</strong>Corolla Cross XEI<div class="meta"><span class="ai">agente</span><span>23:12</span></div></div>
+          <div class="deal"><strong>Diego F.</strong>Yaris XLS<div class="meta"><span class="ai">agente</span><span>22:58</span></div></div>
+          <div class="deal"><strong>Sin nombre</strong>Formulario web<div class="meta"><span class="ai">agente</span><span>21:40</span></div></div>
+        </div>
+        <div class="col">
+          <div class="col-head"><span>Calificado</span><span class="count">2</span></div>
+          <div class="deal active"><strong>Juan M.</strong>Hilux SRV 2024 · entrega Ranger 2018<div class="meta"><span>Martín R.</span><span>23:04</span></div></div>
+          <div class="deal"><strong>Paula S.</strong>SW4 · contado<div class="meta"><span>Sofía L.</span><span>ayer</span></div></div>
+        </div>
+        <div class="col">
+          <div class="col-head"><span>Test drive agendado</span><span class="count">2</span></div>
+          <div class="deal"><strong>Lucas G.</strong>Hilux SRX · jue 10:00<div class="meta"><span>Sofía L.</span><span>lun</span></div></div>
+          <div class="deal"><strong>Ana T.</strong>Corolla · vie 17:30<div class="meta"><span>Martín R.</span><span>lun</span></div></div>
+        </div>
+        <div class="col">
+          <div class="col-head"><span>Cotización o financiación</span><span class="count">1</span></div>
+          <div class="deal"><strong>Raúl B.</strong>Hilux SR · crédito prendario<div class="meta"><span>Pablo D.</span><span>dom</span></div></div>
+        </div>
+        <div class="col">
+          <div class="col-head"><span>Reserva</span><span class="count">1</span></div>
+          <div class="deal"><strong>Marina C.</strong>Corolla Cross HEV<div class="meta"><span>Sofía L.</span><span>sáb</span></div></div>
+        </div>
+        <div class="col">
+          <div class="col-head"><span>Entregado</span><span class="count">1</span></div>
+          <div class="deal"><strong>Hernán V.</strong>Hilux SRV · usado tomado<div class="meta"><span>Pablo D.</span><span>vie</span></div></div>
+        </div>
+      </div>
+      <p class="swipe-hint" aria-hidden="true">Deslizá para ver todas las etapas →</p>
+    </div>
+    <div class="loss">
+      <p><strong>Cuando una venta se cae, queda anotado por qué, con tus motivos:</strong></p>
+      <div class="chips"><span class="chip">Precio</span><span class="chip">Crédito rechazado</span><span class="chip">Usado mal tasado</span><span class="chip">Compró en otra agencia</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 6. CONTROL PARA EL GERENTE -->
+<section class="section" aria-labelledby="t-gerente">
+  <div class="wrap split">
+    <div>
+      <div class="head" style="margin-bottom:28px">
+        <p class="eyebrow">Control para el gerente</p>
+        <h2 id="t-gerente">Cada cliente tiene un responsable, un historial y una próxima acción.</h2>
+      </div>
+      <ul class="feature-list">
+        <li>
+          <span class="fi" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 2l4 4-4 4"/><path d="M3 11V9a3 3 0 0 1 3-3h15"/><path d="M7 22l-4-4 4-4"/><path d="M21 13v2a3 3 0 0 1-3 3H3"/></svg></span>
+          <div><h3>Asignación rotativa</h3><p>Las consultas se reparten por turno entre los vendedores, así nadie acapara las mejores y ninguna queda sin dueño.</p></div>
+        </li>
+        <li>
+          <span class="fi" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></span>
+          <div><h3>Traspaso de IA a vendedor, con registro</h3><p>Cuando el agente pasa una conversación, queda anotado a quién, cuándo y con qué resumen.</p></div>
+        </li>
+        <li>
+          <span class="fi" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></span>
+          <div><h3>Permisos por rol</h3><p>Definís qué ve cada uno, por ejemplo que el vendedor vea sus clientes y el gerente vea todos.</p></div>
+        </li>
+        <li>
+          <span class="fi" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10"/><path d="M10 20V4"/><path d="M16 20v-7"/><path d="M22 20H2"/></svg></span>
+          <div><h3>Métricas por vendedor</h3><p>Ves cuántas conversaciones atendió cada uno y cómo avanzan sus clientes en el embudo, para hablar de números en la reunión del lunes.</p></div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="card record" aria-label="Ficha de cliente de ejemplo" role="img">
+      <div class="record-top">
+        <div><strong>Juan M.</strong><span class="mono">Hilux SRV 2024 · vía WhatsApp</span></div>
+        <span class="stage-pill">Calificado</span>
+      </div>
+      <div class="record-grid">
+        <div><span class="mono">Responsable</span><strong>Martín R.</strong></div>
+        <div><span class="mono">Origen</span><strong>Web · Hilux SRV</strong></div>
+      </div>
+      <div class="next"><span class="mono">PRÓXIMA ACCIÓN</span><strong>Enviar tasación de la Ranger · jue 10:00</strong></div>
+      <ol class="timeline">
+        <li><time>23:01</time><span><b>Agente</b> respondió la consulta y confirmó stock</span></li>
+        <li><time>23:03</time><span><b>Agente</b> registró usado: Ranger 2018</span></li>
+        <li><time>23:04</time><span><b>Traspaso</b> a Martín R. por turno de asignación</span></li>
+        <li><time>09:12</time><span><b>Martín R.</b> pidió fotos del usado</span></li>
+      </ol>
+      <div class="metrics">
+        <span class="mono">CONVERSACIONES ATENDIDAS · ESTA SEMANA</span>
+        <div class="bar"><span>Martín R.</span><span style="--w:72%"></span></div>
+        <div class="bar"><span>Sofía L.</span><span style="--w:64%"></span></div>
+        <div class="bar"><span>Pablo D.</span><span style="--w:48%"></span></div>
+        <small>Valores de ejemplo, ilustrativos.</small>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 7. SEGUIMIENTO -->
+<section class="section band" aria-labelledby="t-seguimiento">
+  <div class="wrap split rev">
+    <div>
+      <div class="head" style="margin-bottom:24px">
+        <p class="eyebrow">Seguimiento</p>
+        <h2 id="t-seguimiento">Seguimiento que no se olvida</h2>
+      </div>
+      <p class="lead">El agente retoma las conversaciones que se enfriaron, con el tiempo de espera y el mensaje que definas para cada etapa, y un radar te muestra qué clientes siguen abiertos y están en riesgo de perderse.</p>
+      <p class="lead" style="margin-top:16px">El cliente que dijo «lo pienso» recibe un mensaje a los días que vos elijas, y si contesta, vuelve al vendedor que lo tenía.</p>
+    </div>
+    <div class="card radar" role="img" aria-label="Radar de clientes en riesgo, ejemplo">
+      <div class="radar-head"><strong>Radar</strong><span class="mono" style="color:var(--ink-2)">clientes abiertos que se enfriaron</span></div>
+      <div class="radar-row risk"><span class="dot"></span><div><strong>Sofía M. · Corolla Cross</strong><span class="mono">dijo «lo pienso» · hace 4 días</span></div><span class="state">en riesgo</span></div>
+      <div class="radar-row risk"><span class="dot"></span><div><strong>Gustavo R. · SW4</strong><span class="mono">cotización enviada · sin respuesta hace 3 días</span></div><span class="state">en riesgo</span></div>
+      <div class="radar-row warm"><span class="dot"></span><div><strong>Lorena K. · Yaris</strong><span class="mono">seguimiento del agente enviado hoy 10:30</span></div><span class="state">retomado</span></div>
+      <div class="radar-row"><span class="dot"></span><div><strong>Andrés P. · Hilux SR</strong><span class="mono">respondió al seguimiento · 11:02</span></div><span class="state">volvió a Pablo D.</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 8. POSTVENTA (SECCIÓN OPCIONAL) ============
+     Para quitarla, borrá desde este comentario hasta "FIN POSTVENTA".
+     Se arma con las automatizaciones del CRM y templates aprobados por Meta;
+     validar el alcance con cada concesionaria antes de prometerlo. -->
+<section class="section" aria-labelledby="t-postventa">
+  <div class="wrap after-sale">
+    <div>
+      <p class="eyebrow">Postventa</p>
+      <h2 id="t-postventa">Avisos de service y renovación, enviados por WhatsApp.</h2>
+      <p class="lead" style="margin-top:18px">Con la fecha de entrega cargada, podés programar el recordatorio del service y, más adelante, un aviso de renovación, con templates aprobados por Meta para escribirle a un cliente que no tiene una conversación abierta.</p>
+    </div>
+    <div class="template-card" role="img" aria-label="Mensaje de recordatorio de service, ejemplo">
+      <div class="mono"><span>template aprobado · service</span><span>09:00</span></div>
+      <div class="msg out" style="max-width:100%"><span class="who">Tu concesionaria</span>Hola Hernán, tu Hilux está llegando a los 10.000 km. ¿Querés que te reservemos un turno para el service esta semana o la próxima?<time>09:00</time></div>
+    </div>
+  </div>
+</section>
+<!-- ============ FIN POSTVENTA ============ -->
+
+<!-- 9. TUS DATOS -->
+<section class="section band data-section" aria-labelledby="t-datos">
+  <svg class="watermark" viewBox="71 68 3957 4017" aria-hidden="true" focusable="false"><g transform="translate(0 4157) scale(1 -1)"><path fill="#3873fb" d="M330 4088 c-97 -3 -187 -16 -220 -31 -44 -21 -51 -74 -19 -135 11 -22 26 -44 59 -85 60 -77 91 -120 182 -249 72 -103 104 -147 191 -266 161 -218 207 -283 288 -404 163 -244 208 -269 465 -253 46 3 86 5 133 7 43 2 272 2 347 0 165 -3 406 -4 624 -1 114 2 338 2 388 0 22 0 59 -2 81 -2 83 -3 112 -3 148 1 110 11 149 40 234 175 28 43 48 73 102 144 42 56 81 110 143 198 91 127 124 174 185 259 238 330 316 439 336 472 34 56 36 92 7 125 -38 41 -127 52 -360 42 -122 -4 -245 -4 -380 1 -202 7 -291 -4 -375 -46 -68 -34 -95 -64 -185 -203 -29 -44 -63 -95 -120 -181 -221 -334 -276 -418 -408 -618 -51 -78 -59 -89 -77 -108 -36 -35 -68 -34 -108 6 -17 18 -27 33 -63 91 -34 56 -78 122 -148 225 -43 62 -119 176 -166 249 -275 422 -311 472 -360 513 -72 60 -174 78 -379 71 -129 -5 -157 -5 -312 0 -118 4 -177 5 -233 3z M2839 2199 c-29 -4 -59 -24 -125 -83 -45 -40 -52 -46 -104 -86 -73 -57 -95 -76 -135 -115 -96 -94 -163 -194 -195 -293 -69 -216 9 -481 195 -664 60 -58 117 -102 251 -193 310 -210 377 -296 477 -612 25 -79 60 -90 240 -75 78 6 120 7 195 7 59 0 85 0 162 -4 108 -4 152 2 187 27 35 25 48 59 37 98 -12 39 -85 183 -158 312 -37 66 -69 119 -143 242 -117 193 -151 252 -310 533 -112 198 -140 247 -225 392 -97 165 -132 227 -190 334 -34 63 -46 85 -55 100 -37 61 -69 85 -104 80z M1241 2198 c-35 -5 -59 -34 -102 -119 -36 -73 -52 -102 -117 -210 -45 -76 -104 -176 -151 -258 -34 -58 -91 -158 -148 -258 -182 -320 -212 -372 -338 -583 -158 -264 -237 -408 -296 -539 -27 -59 -23 -90 14 -117 41 -32 90 -38 252 -31 128 5 212 4 304 -5 122 -11 170 -7 204 16 17 12 26 28 42 78 64 198 134 318 246 422 54 49 99 84 225 172 139 98 193 140 252 199 193 191 274 457 205 667 -43 130 -141 245 -334 395 -62 47 -74 57 -112 89 -56 48 -78 64 -105 75 -14 6 -32 9 -41 7z"/><path fill="#fe6700" d="M2647 2618 c-95 -4 -202 -32 -313 -83 -54 -24 -88 -42 -190 -101 -225 -128 -287 -146 -463 -130 -109 9 -160 2 -167 -23 -6 -22 39 -73 123 -140 87 -71 135 -116 188 -180 156 -192 216 -417 171 -642 -34 -169 -116 -297 -295 -462 -27 -24 -51 -45 -102 -91 -224 -196 -309 -306 -362 -465 -35 -105 -38 -165 -8 -187 28 -19 48 -21 321 -22 93 0 196 -1 230 -2 89 -2 350 -2 436 0 87 2 262 2 305 0 17 -1 50 -2 74 -4 146 -8 216 0 260 30 47 32 45 75 -12 205 -67 152 -126 227 -312 403 -195 183 -280 282 -346 403 -121 224 -125 494 -10 700 63 112 146 206 330 369 165 148 227 214 280 302 39 65 43 89 18 102 -24 12 -95 21 -156 18z"/></g></svg>
+  <div class="wrap" style="position:relative">
+    <div class="head">
+      <p class="eyebrow">Tus datos</p>
+      <h2 id="t-datos">La base de clientes vive en un servidor a nombre de tu concesionaria, con registro de auditoría de cada cambio.</h2>
+    </div>
+    <div class="data-grid">
+      <div class="card">
+        <span class="label">servidor propio</span>
+        <h3>A tu nombre, desde el primer día</h3>
+        <p>DeskcommCRM se instala en un servidor contratado a nombre de la concesionaria, y nosotros lo operamos con el acceso que nos des.</p>
+      </div>
+      <div class="card">
+        <span class="label">auditoría</span>
+        <h3>Cada cambio queda escrito</h3>
+        <p>El registro de auditoría guarda quién cambió qué y cuándo, y no se puede editar ni borrar después.</p>
+      </div>
+      <div class="card">
+        <span class="label">acceso por rol</span>
+        <h3>Cada uno ve lo que le toca</h3>
+        <p>Los vendedores acceden a sus clientes y la cartera completa queda en manos de quien vos definas.</p>
+      </div>
+    </div>
+    <div class="law">
+      <p><strong>Ley 25.326 de Protección de Datos Personales.</strong> En Argentina, la concesionaria es responsable de los datos de sus clientes. Tenerlos en un servidor propio, con auditoría y permisos por rol, te permite saber dónde están, quién accede y qué se hizo con ellos, en lugar de que estén repartidos en los celulares de cada vendedor.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 10. IMPLEMENTACIÓN -->
+<section class="section" aria-labelledby="t-impl">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow">Implementación</p>
+      <h2 id="t-impl">Lo dejamos funcionando nosotros.</h2>
+      <p class="lead">No es un software para que tu equipo aprenda a instalar, es un servicio: nosotros lo ponemos en marcha con tu información y lo seguimos operando.</p>
+    </div>
+    <ol class="timeline-impl">
+      <li>
+        <span class="node" aria-hidden="true"></span>
+        <div><span class="when">Día 1</span><h3>Conexión del número</h3><p>Conectamos tu número de WhatsApp por el canal oficial de Meta y dejamos el servidor andando.</p></div>
+      </li>
+      <li>
+        <span class="node" aria-hidden="true"></span>
+        <div><span class="when">Días 2 y 3</span><h3>Tu información, cargada</h3><p>Cargamos el stock, las listas de precios, las opciones de financiación y las preguntas frecuentes que hoy contestan tus vendedores.</p></div>
+      </li>
+      <li>
+        <span class="node" aria-hidden="true"></span>
+        <div><span class="when">Primera semana</span><h3>Revisión diaria</h3><p>Leemos las conversaciones todos los días con vos o con tu gerente comercial y ajustamos respuestas, preguntas y momentos de traspaso.</p></div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- 11. OFERTA -->
+<section class="section" id="piloto" aria-labelledby="t-oferta">
+  <div class="wrap">
+    <div class="offer">
+      <div>
+        <p class="eyebrow">Piloto</p>
+        <h2 id="t-oferta">Empezá con 30 días en una sucursal o una línea de producto</h2>
+        <p class="lead">Elegís dónde probarlo, por ejemplo los 0 km de una sucursal o solo los usados, y al terminar el mes mirás las conversaciones atendidas, los clientes calificados y los que se recuperaron, y decidís con eso si lo extendés.</p>
+        <a class="btn btn-primary" data-wa="ventas" data-msg="Hola, me interesa el piloto de 30 días para mi concesionaria." href="https://wa.me/">Ver una demo con mi concesionaria</a>
+      </div>
+      <div>
+        <ul class="checks">
+          <li>Instalación y configuración con tus datos reales</li>
+          <li>Conexión de tu número por el canal oficial de WhatsApp</li>
+          <li>Revisión diaria de conversaciones la primera semana</li>
+          <li>Un tablero con las etapas y los motivos de pérdida de tu equipo</li>
+          <li>El servidor y la base quedan a nombre de tu concesionaria</li>
+        </ul>
+        <p class="offer-note">Condiciones del piloto: <span class="ph">[CONDICIONES Y COSTO DEL PILOTO]</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 12. PREGUNTAS FRECUENTES -->
+<section class="section" id="preguntas" aria-labelledby="t-faq">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow">Preguntas frecuentes</p>
+      <h2 id="t-faq">Lo que nos preguntan los gerentes antes de arrancar</h2>
+    </div>
+    <div class="faq">
+      <details>
+        <summary>¿Me van a bloquear el número?</summary>
+        <div class="answer">
+          <p>Para una concesionaria recomendamos el canal oficial de Meta (WhatsApp Cloud API), que es la vía que Meta habilita para empresas. Los mensajes que se envían fuera de una conversación abierta, como un seguimiento o un aviso de service, salen con templates aprobados por Meta.</p>
+          <p>DeskcommCRM también puede conectarse escaneando un código QR, pero para el número comercial de una agencia no es lo que recomendamos.</p>
+        </div>
+      </details>
+      <details>
+        <summary>¿Reemplaza a mis vendedores?</summary>
+        <div class="answer">
+          <p>El agente atiende y califica, y el vendedor cierra. La tasación, la negociación y la entrega siguen en manos de tu equipo, que pasa a recibir clientes con el modelo, el usado y la forma de pago ya conversados.</p>
+        </div>
+      </details>
+      <details>
+        <summary>¿Y si el agente dice un precio equivocado?</summary>
+        <div class="answer">
+          <p>El agente responde con la información que cargamos de tu concesionaria (stock, listas de precios y condiciones de financiación), y cuando no tiene un dato pasa la conversación a una persona en lugar de inventarlo. Por eso la primera semana revisamos las conversaciones todos los días, y cuando cambia una lista de precios se actualiza en el sistema.</p>
+        </div>
+      </details>
+      <details>
+        <summary>¿Tengo que dejar mi CRM actual?</summary>
+        <div class="answer">
+          <p>No hace falta decidirlo el primer día. El piloto puede funcionar en paralelo, y DeskcommCRM puede recibir datos de otros sistemas y avisarles cuando pasa algo (por webhooks), así que en la demo vemos qué conviene según el CRM que uses hoy.</p>
+        </div>
+      </details>
+      <details>
+        <summary>¿Qué pasa con mi base si me quiero ir?</summary>
+        <div class="answer">
+          <p>Los datos están en un servidor a nombre de tu concesionaria, así que si dejás de trabajar con nosotros se quedan con vos. Además, DeskcommCRM es open source con licencia MIT, de modo que podés seguir usándolo por tu cuenta o con otro proveedor.</p>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- 13. CTA FINAL -->
+<section class="section final" id="cta-final" aria-labelledby="t-final">
+  <div class="wrap">
+    <div class="final-box">
+      <svg class="final-iso" viewBox="71 68 3957 4017" aria-hidden="true" focusable="false"><g transform="translate(0 4157) scale(1 -1)"><path fill="#3873fb" d="M330 4088 c-97 -3 -187 -16 -220 -31 -44 -21 -51 -74 -19 -135 11 -22 26 -44 59 -85 60 -77 91 -120 182 -249 72 -103 104 -147 191 -266 161 -218 207 -283 288 -404 163 -244 208 -269 465 -253 46 3 86 5 133 7 43 2 272 2 347 0 165 -3 406 -4 624 -1 114 2 338 2 388 0 22 0 59 -2 81 -2 83 -3 112 -3 148 1 110 11 149 40 234 175 28 43 48 73 102 144 42 56 81 110 143 198 91 127 124 174 185 259 238 330 316 439 336 472 34 56 36 92 7 125 -38 41 -127 52 -360 42 -122 -4 -245 -4 -380 1 -202 7 -291 -4 -375 -46 -68 -34 -95 -64 -185 -203 -29 -44 -63 -95 -120 -181 -221 -334 -276 -418 -408 -618 -51 -78 -59 -89 -77 -108 -36 -35 -68 -34 -108 6 -17 18 -27 33 -63 91 -34 56 -78 122 -148 225 -43 62 -119 176 -166 249 -275 422 -311 472 -360 513 -72 60 -174 78 -379 71 -129 -5 -157 -5 -312 0 -118 4 -177 5 -233 3z M2839 2199 c-29 -4 -59 -24 -125 -83 -45 -40 -52 -46 -104 -86 -73 -57 -95 -76 -135 -115 -96 -94 -163 -194 -195 -293 -69 -216 9 -481 195 -664 60 -58 117 -102 251 -193 310 -210 377 -296 477 -612 25 -79 60 -90 240 -75 78 6 120 7 195 7 59 0 85 0 162 -4 108 -4 152 2 187 27 35 25 48 59 37 98 -12 39 -85 183 -158 312 -37 66 -69 119 -143 242 -117 193 -151 252 -310 533 -112 198 -140 247 -225 392 -97 165 -132 227 -190 334 -34 63 -46 85 -55 100 -37 61 -69 85 -104 80z M1241 2198 c-35 -5 -59 -34 -102 -119 -36 -73 -52 -102 -117 -210 -45 -76 -104 -176 -151 -258 -34 -58 -91 -158 -148 -258 -182 -320 -212 -372 -338 -583 -158 -264 -237 -408 -296 -539 -27 -59 -23 -90 14 -117 41 -32 90 -38 252 -31 128 5 212 4 304 -5 122 -11 170 -7 204 16 17 12 26 28 42 78 64 198 134 318 246 422 54 49 99 84 225 172 139 98 193 140 252 199 193 191 274 457 205 667 -43 130 -141 245 -334 395 -62 47 -74 57 -112 89 -56 48 -78 64 -105 75 -14 6 -32 9 -41 7z"/><path fill="#fe6700" d="M2647 2618 c-95 -4 -202 -32 -313 -83 -54 -24 -88 -42 -190 -101 -225 -128 -287 -146 -463 -130 -109 9 -160 2 -167 -23 -6 -22 39 -73 123 -140 87 -71 135 -116 188 -180 156 -192 216 -417 171 -642 -34 -169 -116 -297 -295 -462 -27 -24 -51 -45 -102 -91 -224 -196 -309 -306 -362 -465 -35 -105 -38 -165 -8 -187 28 -19 48 -21 321 -22 93 0 196 -1 230 -2 89 -2 350 -2 436 0 87 2 262 2 305 0 17 -1 50 -2 74 -4 146 -8 216 0 260 30 47 32 45 75 -12 205 -67 152 -126 227 -312 403 -195 183 -280 282 -346 403 -121 224 -125 494 -10 700 63 112 146 206 330 369 165 148 227 214 280 302 39 65 43 89 18 102 -24 12 -95 21 -156 18z"/></g></svg>
+      <h2 id="t-final">Probalo 30 días con las consultas reales de tu concesionaria.</h2>
+      <p>Te mostramos el agente respondiendo con tu stock y tus condiciones, y si te sirve, arrancamos el piloto en la sucursal que elijas.</p>
+      <div class="btn-row">
+        <a class="btn btn-primary" data-wa="ventas" data-msg="Hola, quiero ver una demo del agente de IA con los datos de mi concesionaria." href="https://wa.me/">Ver una demo con mi concesionaria</a>
+        <a class="btn btn-secondary" data-wa="ventas" data-msg="Hola, quiero hablar sobre el piloto de 30 días." href="https://wa.me/"><svg aria-hidden="true"><use href="#i-wa"/></svg>Hablar por WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <a class="brand" href="#top" aria-label="Tempiax, volver al inicio">
+        <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="147 2338 5671 1312"><g transform="translate(0 6000) scale(1 -1)"><path fill="#3873fb" d="M448 3627 c-9 -2 -18 -5 -20 -6 -3 -1 -10 -3 -17 -6 -6 -2 -14 -5 -17 -6 -3 -2 -12 -5 -19 -6 -7 -2 -15 -5 -17 -5 -2 -1 -10 -4 -17 -6 -8 -2 -16 -4 -19 -6 -3 -2 -10 -4 -16 -6 -5 -2 -15 -5 -22 -7 -22 -9 -20 -2 -21 -80 -1 -70 0 -69 -7 -73 -2 -1 -6 -2 -49 -2 -57 -1 -58 -1 -59 -17 -2 -18 -1 -196 2 -200 4 -9 3 -8 55 -9 52 -1 51 0 55 -9 2 -3 3 -4 3 -165 1 -179 1 -173 7 -196 2 -6 4 -15 5 -22 1 -6 3 -15 5 -20 2 -4 5 -14 7 -21 4 -16 10 -27 28 -54 17 -27 56 -54 86 -62 6 -2 16 -5 22 -6 12 -5 16 -5 37 -8 8 0 21 -2 28 -3 18 -3 64 -3 87 0 9 1 21 2 28 3 27 3 25 -9 25 108 0 121 4 107 -40 107 -87 0 -106 14 -108 81 -1 30 -1 240 0 248 3 19 0 18 76 19 69 1 66 0 70 8 3 7 2 206 -1 211 -5 7 -6 7 -71 7 -63 0 -64 0 -70 5 -5 6 -5 6 -5 104 0 116 2 109 -31 100z M5029 3523 c-92 -1 -88 0 -95 -7 -8 -8 -4 -22 10 -40 4 -5 11 -15 15 -21 4 -7 12 -17 17 -23 5 -6 11 -15 14 -20 3 -5 9 -13 14 -19 5 -6 12 -16 17 -23 4 -7 10 -16 13 -19 4 -4 10 -13 15 -20 5 -8 12 -18 17 -23 4 -6 11 -16 16 -23 5 -8 12 -18 16 -22 4 -5 10 -14 13 -19 12 -19 26 -31 41 -34 8 -2 436 -1 444 1 15 3 25 11 39 32 5 7 11 17 14 21 4 3 10 12 14 18 4 6 11 16 16 22 4 6 10 14 13 18 2 4 10 14 16 23 6 9 14 19 17 24 3 4 9 13 14 19 5 6 11 15 14 20 3 4 9 13 14 19 5 6 12 16 16 22 4 6 12 16 17 24 22 30 22 44 1 49 -9 2 -192 2 -208 0 -34 -4 -46 -14 -77 -63 -8 -12 -17 -26 -20 -30 -4 -5 -9 -14 -13 -19 -3 -5 -8 -14 -12 -19 -4 -5 -9 -12 -11 -16 -4 -6 -25 -38 -37 -55 -3 -5 -11 -18 -19 -29 -27 -41 -30 -42 -50 -16 -6 7 -12 17 -16 22 -3 5 -9 15 -13 21 -5 6 -12 16 -15 22 -3 6 -9 13 -11 17 -3 3 -9 12 -13 18 -4 7 -10 16 -13 20 -5 7 -19 28 -28 43 -2 4 -7 11 -11 16 -3 5 -8 13 -11 17 -24 41 -47 54 -96 53 -8 0 -52 -1 -98 -1z M2374 3440 c-23 -1 -32 -2 -45 -7 -6 -1 -15 -4 -21 -5 -13 -4 -34 -13 -42 -18 -4 -3 -9 -6 -12 -8 -13 -7 -33 -25 -48 -43 -14 -17 -17 -17 -31 2 -22 28 -62 58 -89 66 -5 1 -15 4 -22 6 -28 9 -98 10 -125 1 -6 -1 -16 -4 -23 -6 -30 -7 -63 -28 -86 -55 -15 -18 -19 -15 -20 16 -1 33 11 30 -106 30 -107 0 -101 0 -106 -9 -4 -5 -4 -768 0 -773 5 -7 -1 -7 105 -7 91 0 96 0 100 2 8 4 7 -18 7 235 0 251 0 240 7 263 2 7 5 16 6 20 7 24 27 48 51 63 17 10 65 12 90 2 17 -6 35 -24 46 -47 17 -34 16 -23 16 -310 0 -244 -1 -221 8 -225 5 -3 189 -4 197 -1 11 3 9 -25 10 237 1 266 0 249 9 272 3 6 6 14 7 18 10 28 40 54 68 60 57 12 101 -10 119 -60 1 -5 4 -11 5 -14 7 -14 6 4 7 -263 1 -243 1 -243 3 -246 5 -6 -2 -6 105 -6 108 1 101 0 104 9 2 5 3 496 1 517 0 7 -1 18 -2 27 -2 19 -3 30 -7 40 -2 5 -4 13 -5 19 -2 5 -4 12 -6 16 -2 4 -5 12 -7 17 -5 14 -11 27 -18 38 -4 5 -9 14 -12 19 -14 22 -53 60 -70 69 -4 2 -10 6 -14 8 -12 8 -31 16 -47 20 -4 1 -11 3 -15 4 -10 4 -22 6 -34 6 -20 1 -41 2 -58 1z M3166 3438 c-5 0 -14 -2 -19 -4 -6 -2 -16 -4 -23 -6 -17 -4 -38 -12 -48 -18 -5 -3 -11 -7 -15 -9 -8 -4 -21 -14 -32 -25 -21 -20 -27 -17 -27 15 0 31 8 28 -106 29 -108 0 -107 0 -110 -12 -2 -9 -1 -1046 2 -1050 4 -8 -2 -7 105 -7 96 0 96 0 100 2 9 4 8 -14 9 179 1 188 0 175 7 177 4 2 6 0 15 -7 19 -17 33 -27 47 -34 4 -2 11 -5 15 -8 13 -8 34 -15 57 -18 8 -1 21 -3 30 -5 23 -5 57 -5 84 0 10 2 24 5 31 6 14 2 35 9 46 14 35 17 45 23 74 45 38 28 84 88 107 137 4 9 10 21 13 27 2 6 5 14 6 16 1 2 3 9 4 16 4 12 5 17 8 31 0 5 2 14 4 21 5 16 5 19 6 42 4 52 1 107 -5 130 -3 9 -4 14 -7 31 0 6 -3 16 -5 22 -2 6 -4 14 -5 17 0 3 -3 10 -6 16 -3 5 -6 12 -7 16 -11 25 -19 39 -42 73 -10 15 -47 55 -65 70 -6 5 -14 11 -18 15 -7 6 -17 12 -45 28 -15 8 -32 14 -46 17 -6 2 -16 5 -23 7 -21 6 -86 9 -116 4z m36 -217 c21 -3 32 -6 41 -11 4 -3 10 -6 13 -8 25 -13 52 -42 68 -74 22 -44 24 -131 3 -177 -17 -38 -51 -72 -82 -84 -2 -1 -8 -4 -14 -6 -24 -11 -88 -13 -111 -3 -59 24 -89 52 -105 102 -7 20 -8 21 -9 37 -5 38 -5 44 0 83 8 68 62 128 125 139 32 6 44 6 71 2z M1071 3416 c-19 -1 -24 -2 -36 -6 -4 -2 -13 -4 -20 -5 -65 -14 -134 -57 -179 -110 -5 -5 -11 -13 -15 -17 -3 -4 -9 -12 -13 -17 -3 -6 -10 -15 -14 -21 -7 -12 -12 -21 -16 -32 -2 -3 -6 -12 -9 -19 -10 -24 -12 -28 -14 -38 -1 -5 -3 -15 -5 -21 -3 -14 -5 -21 -6 -36 -1 -7 -2 -21 -4 -30 -3 -25 -4 -58 0 -78 1 -8 2 -19 3 -25 2 -24 4 -36 8 -50 2 -9 4 -18 5 -22 3 -12 24 -60 33 -75 8 -13 24 -37 31 -45 26 -32 39 -45 71 -69 33 -26 87 -51 123 -57 7 -2 17 -4 21 -6 15 -4 19 -5 62 -8 18 -1 60 -1 77 0 40 3 39 3 54 7 9 3 20 5 26 6 11 2 36 11 46 15 4 2 16 9 28 14 16 9 23 13 32 20 6 4 14 11 18 14 16 12 59 57 64 68 3 7 -1 12 -17 22 -6 4 -16 10 -23 15 -7 4 -16 9 -20 12 -4 2 -15 8 -25 14 -9 6 -20 13 -25 15 -4 2 -10 6 -14 9 -31 23 -41 23 -65 4 -16 -13 -23 -16 -63 -30 -23 -9 -94 -7 -116 2 -4 2 -12 4 -18 6 -35 10 -63 35 -80 70 -5 11 -5 17 1 20 1 0 109 1 244 1 273 1 250 0 256 11 8 16 8 128 0 165 -1 5 -3 16 -5 24 -2 13 -4 18 -7 25 -2 5 -6 14 -8 20 -9 26 -18 45 -30 65 -3 4 -7 11 -10 16 -3 5 -8 12 -10 15 -3 3 -9 10 -15 17 -33 39 -70 69 -108 89 -5 2 -11 5 -13 7 -5 3 -39 14 -52 17 -5 1 -12 3 -16 5 -14 5 -21 6 -41 8 -23 1 -67 1 -91 -1z m80 -199 c14 -2 28 -7 47 -17 22 -11 43 -34 58 -64 11 -23 12 -28 5 -33 -6 -3 -284 -3 -289 1 -7 5 -6 13 4 33 20 40 49 64 94 77 11 4 61 5 81 3z M5189 3098 c-5 -3 -12 -13 -20 -26 -3 -7 -8 -15 -10 -19 -3 -4 -6 -10 -9 -13 -2 -4 -5 -10 -7 -12 -1 -3 -4 -8 -6 -12 -2 -4 -7 -12 -11 -18 -4 -7 -11 -20 -17 -29 -5 -10 -11 -22 -14 -26 -3 -5 -10 -17 -16 -26 -5 -10 -12 -23 -16 -28 -3 -5 -10 -17 -14 -26 -5 -9 -12 -20 -15 -25 -3 -5 -8 -12 -10 -16 -9 -17 -19 -34 -21 -38 -2 -2 -6 -9 -10 -16 -3 -7 -9 -17 -12 -22 -12 -19 -17 -27 -19 -33 -2 -3 -7 -12 -11 -19 -28 -44 -28 -61 0 -66 15 -3 146 -2 152 1 6 3 10 7 11 13 3 20 6 29 20 55 13 22 40 49 73 73 11 8 31 24 57 45 66 54 80 114 45 185 -8 16 -35 42 -75 72 -6 5 -15 12 -20 16 -13 11 -18 13 -25 10z M5545 3096 c-6 -4 -52 -40 -66 -52 -22 -18 -44 -51 -50 -74 -18 -62 1 -116 54 -155 6 -4 15 -12 20 -16 5 -3 14 -11 21 -16 64 -45 101 -89 107 -125 5 -35 -1 -33 117 -31 56 1 58 1 64 8 10 11 6 25 -20 69 -6 10 -14 23 -17 30 -4 6 -8 14 -10 17 -4 5 -14 22 -20 35 -3 5 -8 12 -11 17 -2 4 -7 12 -10 18 -12 21 -15 26 -22 38 -4 6 -9 14 -11 18 -4 9 -15 26 -19 33 -2 3 -7 11 -10 17 -3 6 -11 19 -17 30 -7 11 -13 23 -15 26 -2 4 -7 13 -12 21 -5 8 -12 21 -16 28 -4 7 -10 17 -12 21 -3 4 -9 15 -14 23 -12 23 -19 27 -31 20z"/><path fill="#fe6700" d="M3779 3660 c-50 -6 -97 -51 -105 -99 -6 -33 -4 -56 8 -82 11 -25 38 -52 63 -62 4 -2 11 -5 15 -7 14 -7 57 -9 71 -3 3 2 11 5 17 8 49 21 79 65 79 118 1 79 -67 137 -148 127z M4320 3438 c-6 0 -17 -3 -25 -5 -7 -2 -18 -5 -23 -6 -20 -5 -33 -10 -74 -34 -4 -2 -10 -7 -14 -10 -4 -4 -12 -10 -18 -15 -13 -10 -37 -34 -46 -45 -3 -5 -10 -14 -15 -20 -5 -6 -12 -17 -16 -23 -3 -6 -8 -13 -10 -15 -7 -10 -16 -28 -30 -61 -9 -22 -10 -26 -13 -37 -1 -6 -3 -17 -5 -23 -2 -6 -3 -15 -4 -19 -1 -5 -2 -14 -3 -21 0 -7 -3 -18 -4 -25 -6 -24 -6 -84 0 -108 1 -7 3 -19 4 -28 3 -22 5 -34 7 -42 1 -3 3 -12 5 -20 2 -8 4 -18 6 -22 6 -16 8 -21 14 -32 11 -26 17 -37 21 -43 3 -4 8 -11 11 -17 3 -6 10 -15 14 -21 4 -5 11 -14 16 -20 10 -15 42 -46 55 -56 5 -3 13 -9 17 -12 21 -16 60 -35 90 -42 33 -9 33 -8 81 -8 51 0 52 0 99 12 25 6 69 34 96 60 17 17 19 14 20 -19 1 -37 -11 -33 106 -33 107 0 99 -1 104 9 3 6 4 765 1 772 -5 9 3 8 -104 9 -119 0 -106 4 -107 -31 -1 -38 -2 -39 -26 -18 -19 18 -27 24 -37 30 -5 3 -12 7 -16 10 -10 7 -35 17 -48 19 -6 1 -16 4 -22 5 -21 6 -78 9 -107 5z m98 -222 c52 -3 109 -40 132 -86 5 -9 11 -27 14 -37 1 -6 4 -16 6 -22 7 -25 7 -70 1 -92 -3 -7 -5 -18 -7 -26 -5 -22 -14 -40 -34 -66 -6 -9 -13 -15 -27 -26 -36 -28 -107 -40 -147 -25 -4 2 -12 5 -16 6 -36 11 -67 40 -91 89 -18 36 -21 128 -4 173 12 32 34 62 60 81 18 14 60 30 82 31 7 0 13 1 15 1 1 0 8 0 16 -1z M3704 3341 c-6 -2 -11 -8 -13 -13 -2 -7 -1 -689 1 -694 6 -11 5 -11 114 -11 99 1 93 0 98 7 4 5 4 -1 4 356 -1 387 0 348 -9 353 -6 3 -188 4 -195 2z M5489 3193 c-15 -2 -36 -9 -46 -15 -2 -1 -12 -6 -21 -11 -10 -5 -21 -11 -24 -13 -10 -7 -31 -17 -40 -20 -5 -1 -13 -4 -19 -6 -12 -4 -27 -5 -52 -4 -39 1 -39 -5 4 -42 25 -22 45 -45 54 -66 3 -6 7 -15 10 -20 5 -12 6 -15 9 -34 9 -67 -14 -118 -75 -170 -38 -32 -53 -48 -72 -72 -17 -25 -17 -25 -22 -37 -11 -29 -11 -46 0 -52 4 -2 348 -3 356 -1 14 4 12 25 -8 65 -11 22 -41 55 -77 87 -15 14 -30 29 -38 41 -4 5 -10 13 -13 18 -8 11 -14 21 -19 36 -2 5 -5 13 -7 17 -8 21 -9 65 -2 89 5 17 18 45 26 55 18 23 27 33 52 55 60 53 85 85 76 96 -5 5 -27 6 -52 4z"/></g></svg>
+      </a>
+      <p>Tempiax instala, configura y opera agentes de IA para WhatsApp sobre DeskcommCRM, un CRM open source con licencia MIT.</p>
+      <span class="mono">© <span id="year">2026</span> Tempiax · <a href="mailto:[EMAIL DE CONTACTO]" class="ph">[EMAIL DE CONTACTO]</a></span>
+    </div>
+    <div class="footer-links">
+      <a data-wa="ventas" data-msg="Hola, quiero hablar sobre el agente de IA para mi concesionaria." href="https://wa.me/">WhatsApp</a>
+      <a href="#demo">Demo</a>
+      <a href="#preguntas">Preguntas</a>
+    </div>
+  </div>
+</footer>
+
+<a class="fab" id="fab" data-wa="ventas" data-msg="Hola, quiero hablar sobre el agente de IA para mi concesionaria." href="https://wa.me/" aria-label="Hablar por WhatsApp">
+  <svg aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp
+</a>
+
+<script>
+/* ============ CONFIGURACIÓN ============
+   Reemplazá los números (formato internacional sin "+", espacios ni guiones,
+   p. ej. 5491123456789). Mientras tengan corchetes, los botones abren WhatsApp
+   sin destinatario, con el mensaje precargado. */
+const CONFIG = {
+  whatsappVentas: "[NÚMERO DE WHATSAPP]",
+  whatsappDemo: "[NÚMERO DE WHATSAPP DEMO]"
+};
+
+(function () {
+  // Enlaces de WhatsApp
+  const numbers = { ventas: CONFIG.whatsappVentas, demo: CONFIG.whatsappDemo };
+  document.querySelectorAll("[data-wa]").forEach(function (a) {
+    const raw = numbers[a.dataset.wa] || "";
+    const n = /^\d{8,15}$/.test(raw) ? raw : "";
+    const msg = a.dataset.msg ? "?text=" + encodeURIComponent(a.dataset.msg) : "";
+    a.href = "https://wa.me/" + n + msg;
+    a.target = "_blank";
+    a.rel = "noopener";
+  });
+
+  const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const io = "IntersectionObserver" in window;
+
+  // Chat: los mensajes aparecen en secuencia al entrar en pantalla
+  const chat = document.getElementById("chat");
+  const items = chat ? Array.from(chat.querySelectorAll(".step-item")) : [];
+  function showAll() {
+    items.forEach(function (el) { if (!el.hasAttribute("data-typing")) el.classList.add("shown"); });
+  }
+  function play() {
+    let t = 0;
+    items.forEach(function (el, i) {
+      if (el.hasAttribute("data-typing")) {
+        setTimeout(function () { el.style.display = "flex"; el.classList.add("shown"); }, t);
+        t += 1100;
+        setTimeout(function () { el.style.display = "none"; }, t);
+      } else {
+        setTimeout(function () { el.classList.add("shown"); }, t);
+        t += i === 0 ? 600 : 900;
+      }
+    });
+  }
+  if (chat) {
+    if (reduce || !io) { showAll(); }
+    else {
+      const obs = new IntersectionObserver(function (entries) {
+        if (entries[0].isIntersecting) { play(); obs.disconnect(); }
+      }, { threshold: 0.35 });
+      obs.observe(chat);
+    }
+  }
+
+  // Botón flotante: aparece al pasar el hero y se oculta en el CTA final
+  const fab = document.getElementById("fab");
+  const hero = document.querySelector(".hero");
+  const finalCta = document.getElementById("cta-final");
+  if (fab && io) {
+    let pastHero = false, atFinal = false;
+    const update = function () { fab.classList.toggle("show", pastHero && !atFinal); };
+    new IntersectionObserver(function (e) { pastHero = !e[0].isIntersecting; update(); }, { threshold: 0 }).observe(hero);
+    new IntersectionObserver(function (e) { atFinal = e[0].isIntersecting; update(); }, { threshold: 0.3 }).observe(finalCta);
+  } else if (fab) { fab.classList.add("show"); }
+
+  // Sombra del encabezado al hacer scroll (escritorio)
+  const header = document.querySelector(".site-header");
+  window.addEventListener("scroll", function () { header.classList.toggle("scrolled", window.scrollY > 8); }, { passive: true });
+
+  const y = document.getElementById("year"); if (y) y.textContent = new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
