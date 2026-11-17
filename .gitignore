@@ -1,0 +1,3 @@
+# Gilroy: la licencia prohíbe redistribuir el archivo de la fuente
+fonts/*
+!fonts/LEEME.txt
