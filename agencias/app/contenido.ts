@@ -73,6 +73,12 @@ export const PENDIENTES = {
     videoSolucion: null as string | null,
     /** Demo de 90 a 120 s con las preguntas de siempre. */
     videoDemo: null as string | null,
+    /**
+     * Fotos del Corolla del chat del hero, en `public/`. Las que todavía no
+     * están subidas se saltean; sin ninguna, el chat muestra marcos con el
+     * ícono del auto.
+     */
+    fotosDelChat: ["/autos/corolla-frente.jpg", "/autos/corolla-atras.jpg", "/autos/corolla-interior.jpg"] as readonly string[],
     /** Foto de quien atiende la videollamada. */
     fotoDeLaDemo: null as { src: string; nombre: string; rol: string } | null,
   },
@@ -93,14 +99,41 @@ export const PENDIENTES = {
   },
 };
 
-export const HERO = {
-  titular: "Cada “¿sigue disponible?” del domingo, contestado antes de que vea otra agencia",
-  subtitulo:
-    "AutoVenta responde con fotos y datos de tus unidades, pregunta por el usado y la forma de pago y agenda la visita. En 14 días está andando.",
-} as const;
+/**
+ * Las versiones del hero, una por dolor del comprador. La página las rota cada
+ * 5 segundos; el botón y el microtexto (`CTA`) son los mismos en todas. La
+ * primera es la que se ve sin JavaScript y la que usan los metadatos.
+ */
+export const HERO_VERSIONES = [
+  {
+    id: "fuera-de-horario",
+    nombre: "Consultas fuera de horario",
+    titular: "Cada “¿sigue disponible?” del domingo, contestado antes de que vea otra agencia",
+    subtitulo:
+      "AutoVenta responde con fotos y datos de tus unidades, pregunta por el usado y la forma de pago y agenda la visita. En 48 horas está andando.",
+  },
+  {
+    id: "vendedores-saturados",
+    nombre: "Vendedores saturados",
+    titular: "Tus vendedores contestan 40 mensajes para conseguir 3 visitas",
+    subtitulo:
+      "AutoVenta contesta primero, pregunta presupuesto, forma de pago y para cuándo lo quiere, y le pasa al vendedor solo a quien está listo, con el resumen hecho.",
+  },
+  {
+    id: "vendedor-que-se-va",
+    nombre: "Vendedor que se va",
+    titular: "Cuando un vendedor renuncia, los clientes se quedan en tu agencia",
+    subtitulo:
+      "Todas las conversaciones de WhatsApp quedan en una bandeja de la agencia. Si alguien se va, el siguiente retoma cada cliente sabiendo qué se habló.",
+  },
+] as const;
+
+export type VersionDelHero = (typeof HERO_VERSIONES)[number];
+
+export const HERO: VersionDelHero = HERO_VERSIONES[0];
 
 export const CREDIBILIDAD = [
-  "Andando en 14 días",
+  "Andando en 48 horas",
   "El asistente lleva el nombre de tu agencia",
   "Tus clientes quedan en un servidor a tu nombre",
 ] as const;
@@ -123,38 +156,40 @@ export const SOLUCION = {
 } as const;
 
 export const COMO_FUNCIONA = {
-  encabezado: "Andando en 14 días, con una hora tuya para arrancar",
+  encabezado: "Andando en 48 horas desde la primera reunión",
   subtitulo:
-    "Vos ponés una entrevista, el stock al día y 15 minutos por día la primera semana; el resto lo hacemos nosotros.",
+    "Vos ponés una reunión de una hora y el stock al día; en las 48 horas siguientes lo dejamos respondiendo consultas reales.",
   pasos: [
     {
-      titulo: "Una hora con vos.",
+      titulo: "Hora 0: una reunión con vos.",
       texto:
         "Nos contás qué unidades vendés, a qué comprador apuntás, cómo trabajás la permuta y la financiación y en qué momento se te caen las ventas. Nos pasás la planilla de stock, las condiciones de financiación, la garantía y los horarios.",
     },
     {
-      titulo: "Ordenamos el recorrido del comprador.",
+      titulo: "Ese mismo día ordenamos el recorrido del comprador.",
       texto:
         "Definimos con tus palabras las etapas: consultó, tiene usado o financia, visita agendada, vino a la agencia, señó, entregado o no compró. Cada interesado queda en un lugar visible.",
     },
     {
-      titulo: "Entrenamos al asistente.",
+      titulo: "En las primeras 24 horas entrenamos al asistente.",
       texto:
         "Le cargamos tu nombre, tu tono, el stock con precios y fotos y las reglas: qué preguntar primero, qué datos del usado pedir, qué nunca prometer y cuándo pasarle la conversación a un vendedor.",
     },
     {
-      titulo: "Lo probamos con las preguntas de siempre.",
+      titulo: "Antes de las 48 horas lo probamos con vos.",
       texto:
-        "“¿Sigue disponible?”, “¿tomás mi Gol 2015?”, “¿financiás sin recibo de sueldo?”, “¿cuál es el último precio?”, “lo vi y tiene un rayón”. Lo ajustamos hasta que responde como tu mejor vendedor.",
+        "“¿Sigue disponible?”, “¿tomás mi Gol 2015?”, “¿financiás sin recibo de sueldo?”, “¿cuál es el último precio?”, “lo vi y tiene un rayón”. Lo ajustamos con vos hasta que responde como tu mejor vendedor, y lo conectamos a tu WhatsApp.",
     },
     {
-      titulo: "Lo acompañamos con números.",
+      titulo: "Desde que arranca, lo acompañamos con números.",
       texto:
-        "Las primeras semanas tus vendedores ven cada conversación y pueden intervenir, y vos o tu jefe de ventas marcan en 15 minutos por día lo que no les gustó. Después revisamos con vos, una vez por mes, consultas, visitas, señas y entregas por vendedor y por canal.",
+        "Tus vendedores ven cada conversación y pueden intervenir, y la primera semana vos o tu jefe de ventas marcan en 15 minutos por día lo que no les gustó. Después revisamos con vos, una vez por mes, consultas, visitas, señas y entregas por vendedor y por canal.",
     },
   ],
   hitos: [
-    { dia: "Día 14", texto: "El asistente responde consultas reales." },
+    { dia: "0 h", texto: "Primera reunión: nos pasás el stock, la financiación y cómo vendés." },
+    { dia: "24 h", texto: "Te mostramos el asistente respondiendo con tus autos y lo ajustamos con vos." },
+    { dia: "48 h", texto: "El asistente responde consultas reales en tu WhatsApp." },
     { dia: "Día 30", texto: "Comparamos las visitas agendadas con las de antes." },
     {
       dia: "Día 90",
