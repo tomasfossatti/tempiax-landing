@@ -101,7 +101,7 @@ export const PENDIENTES = {
 
 /**
  * Las versiones del hero, una por dolor del comprador. La página las rota cada
- * 5 segundos; el botón y el microtexto (`CTA`) son los mismos en todas. La
+ * 7 segundos; el botón y el microtexto (`CTA`) son los mismos en todas. La
  * primera es la que se ve sin JavaScript y la que usan los metadatos.
  */
 export const HERO_VERSIONES = [
