@@ -36,7 +36,7 @@ export type PreguntaFrecuente = {
   readonly respuesta: string | null;
 };
 
-export const NOMBRE_DEL_PRODUCTO = "Tempiax";
+export const NOMBRE_DEL_PRODUCTO = "AutoVenta";
 
 export const CTA = {
   boton: "Quiero ver la demo con mis autos",
@@ -54,7 +54,7 @@ export const PENDIENTES = {
    * link rastreable del propio CRM o una agenda. Sin él, el botón baja al
    * llamado final y la página no se indexa.
    */
-  enlaceDeLaDemo: "https://wa.me/5492995191821?text=Hola%2C%20quiero%20ver%20la%20demo%20de%20Tempiax%20con%20mis%20autos" as string | null,
+  enlaceDeLaDemo: "https://wa.me/5492995191821?text=Hola%2C%20quiero%20ver%20la%20demo%20de%20AutoVenta%20con%20mis%20autos" as string | null,
   precioImplementacion: null as string | null,
   precioAbono: null as string | null,
   /** Logos de las primeras agencias, con autorización escrita. */
@@ -96,7 +96,7 @@ export const PENDIENTES = {
 export const HERO = {
   titular: "Cada “¿sigue disponible?” del domingo, contestado antes de que vea otra agencia",
   subtitulo:
-    "Tempiax responde con fotos y datos de tus unidades, pregunta por el usado y la forma de pago y agenda la visita. En 14 días está andando.",
+    "AutoVenta responde con fotos y datos de tus unidades, pregunta por el usado y la forma de pago y agenda la visita. En 14 días está andando.",
 } as const;
 
 export const CREDIBILIDAD = [
@@ -117,7 +117,7 @@ export const SOLUCION = {
   subtitulo:
     "Contesta en segundos, averigua qué busca la persona, si tiene usado y cómo piensa pagar, y le pasa al vendedor a quien está listo para venir.",
   cuerpo: [
-    "Tempiax conoce tu stock y atiende cada consulta a cualquier hora, con los datos y las fotos de la unidad. Mientras conversa junta lo que tu vendedor necesita para avanzar, y agenda la visita o la prueba de manejo.",
+    "AutoVenta conoce tu stock y atiende cada consulta a cualquier hora, con los datos y las fotos de la unidad. Mientras conversa junta lo que tu vendedor necesita para avanzar, y agenda la visita o la prueba de manejo.",
     "Cuando el comprador quiere negociar, cerrar o pide hablar con alguien, pasa la conversación a un vendedor en el momento. Tu cliente termina hablando con una persona, como siempre, y esa persona ya conoce su caso.",
   ],
 } as const;
@@ -242,7 +242,7 @@ export const PRUEBA_SOCIAL = {
 export const OFERTA = {
   encabezado: "Cuesta menos que el margen de un auto",
   subtitulo:
-    "Con recuperar una venta por mes que hoy se pierde por contestar tarde, Tempiax se paga.",
+    "Con recuperar una venta por mes que hoy se pierde por contestar tarde, AutoVenta se paga.",
   incluye: [
     "El asistente con tu stock y tu marca",
     "La agenda con confirmación y recordatorio",
@@ -278,7 +278,7 @@ export const PREGUNTAS: {
     {
       pregunta: "Me escriben por Marketplace, Mercado Libre e Instagram. ¿Lo atiende igual?",
       respuesta:
-        "Tempiax atiende en WhatsApp, que es donde terminan casi todas esas consultas, y el tablero registra de qué canal llegó cada interesado.",
+        "AutoVenta atiende en WhatsApp, que es donde terminan casi todas esas consultas, y el tablero registra de qué canal llegó cada interesado.",
     },
     {
       pregunta: "¿Al cliente le va a aparecer un menú de “marque 1”?",

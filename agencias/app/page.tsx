@@ -18,10 +18,9 @@ import {
   X,
 } from "lucide-react";
 
-import { LogotipoDoProduto } from "@/components/branding/MarcaDoProduto";
-
 import { BarraFijaMovil } from "./_componentes/BarraFijaMovil";
 import { ChatDelDomingo } from "./_componentes/ChatDelDomingo";
+import { Logotipo } from "./_componentes/Logotipo";
 import {
   BENEFICIOS,
   COMO_FUNCIONA,
@@ -87,7 +86,7 @@ export default function LandingAgenciasPage() {
       {/* ── Navegación: logo y botón, sin otros enlaces ─────────────────── */}
       <header className="border-b border-[#dbe8f6] bg-[#f2fcfe]/90">
         <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 sm:px-6">
-          <LogotipoDoProduto nome={NOMBRE_DEL_PRODUCTO} className="h-7 w-auto" />
+          <Logotipo />
           {/* En el celular el botón del hero ya está a la vista y después aparece la barra fija. */}
           <div className="hidden sm:block">
             <BotonDemo tamano="chico" />
