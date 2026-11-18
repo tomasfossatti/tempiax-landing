@@ -280,6 +280,7 @@ export const OFERTA = {
     "Con recuperar una venta por mes que hoy se pierde por contestar tarde, AutoVenta se paga.",
   incluye: [
     "El asistente con tu stock y tu marca",
+    "El catálogo personalizado de tus unidades, gratis con la instalación",
     "La agenda con confirmación y recordatorio",
     "La bandeja compartida",
     "El seguimiento automático",
