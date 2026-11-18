@@ -338,7 +338,8 @@ export const PREGUNTAS: {
     },
     {
       pregunta: "¿Hay que firmar un mínimo de meses? ¿Hay prueba?",
-      respuesta: null,
+      respuesta:
+        "Sí, hay prueba: tenés 3 días gratis con el asistente respondiendo las consultas reales de tu agencia.",
     },
     {
       pregunta: "¿Trabajan con agencias de mi zona?",
