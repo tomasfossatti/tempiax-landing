@@ -10,7 +10,7 @@ const CHECK = "M30 60L43 72L80 34";
 export function Isotipo({ className = "" }: { readonly className?: string }) {
   return (
     <svg viewBox="0 0 100 100" aria-hidden focusable="false" className={className}>
-      <mask id="autoventa-iso-aire">
+      <mask id="autoventa-iso-aire" maskUnits="userSpaceOnUse" x="0" y="0" width="100" height="100">
         <rect width="100" height="100" fill="#fff" />
         <path d={CHECK} fill="none" stroke="#000" strokeWidth="23" strokeLinecap="round" strokeLinejoin="round" />
       </mask>
