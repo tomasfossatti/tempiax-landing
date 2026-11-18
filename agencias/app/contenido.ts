@@ -322,7 +322,8 @@ export const PREGUNTAS: {
     },
     {
       pregunta: "¿El stock lo cargo a mano o se conecta con mi web?",
-      respuesta: null,
+      respuesta:
+        "No lo cargás a mano: AutoVenta se conecta con tu catálogo personalizado, que viene gratis con la instalación. El asistente responde siempre con el stock que tenés publicado ahí.",
     },
     {
       pregunta: "Financio con banco y también en cuotas propias. ¿Sirve igual?",
