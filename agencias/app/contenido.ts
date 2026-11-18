@@ -54,7 +54,7 @@ export const PENDIENTES = {
    * link rastreable del propio CRM o una agenda. Sin él, el botón baja al
    * llamado final y la página no se indexa.
    */
-  enlaceDeLaDemo: null as string | null,
+  enlaceDeLaDemo: "https://wa.me/5492995191821?text=Hola%2C%20quiero%20ver%20la%20demo%20de%20Tempiax%20con%20mis%20autos" as string | null,
   precioImplementacion: null as string | null,
   precioAbono: null as string | null,
   /** Logos de las primeras agencias, con autorización escrita. */
@@ -79,7 +79,7 @@ export const PENDIENTES = {
   pie: {
     razonSocial: null as string | null,
     cuit: null as string | null,
-    whatsapp: null as string | null,
+    whatsapp: "+54 9 2995 19-1821" as string | null,
     correo: null as string | null,
     direccion: null as string | null,
     instagram: null as string | null,
