@@ -313,7 +313,7 @@ export const PREGUNTAS: {
     {
       pregunta: "Me escriben por Marketplace, Mercado Libre e Instagram. ¿Lo atiende igual?",
       respuesta:
-        "AutoVenta atiende en WhatsApp, que es donde terminan casi todas esas consultas, y el tablero registra de qué canal llegó cada interesado.",
+        "Sí. AutoVenta se conecta con Marketplace, Mercado Libre e Instagram además de WhatsApp, y atiende las consultas de todos los canales igual. El tablero registra de qué canal llegó cada interesado.",
     },
     {
       pregunta: "¿Al cliente le va a aparecer un menú de “marque 1”?",
