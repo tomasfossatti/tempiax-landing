@@ -1,3 +1,6 @@
+import { existsSync } from "node:fs";
+import { join } from "node:path";
+
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import {
@@ -20,6 +23,7 @@ import {
 
 import { BarraFijaMovil } from "./_componentes/BarraFijaMovil";
 import { ChatDelDomingo } from "./_componentes/ChatDelDomingo";
+import { HeroRotativo } from "./_componentes/HeroRotativo";
 import { Logotipo } from "./_componentes/Logotipo";
 import {
   BENEFICIOS,
@@ -28,6 +32,7 @@ import {
   CTA,
   GARANTIA,
   HERO,
+  HERO_VERSIONES,
   LLAMADO_FINAL,
   NOMBRE_DEL_PRODUCTO,
   OFERTA,
@@ -49,6 +54,11 @@ import {
  */
 
 const ENLACE = PENDIENTES.enlaceDeLaDemo ?? "#demo";
+
+/** Las fotos del chat del hero que ya están en `public/`, revisadas al compilar. */
+const FOTOS_DEL_CHAT = PENDIENTES.medios.fotosDelChat.filter((src) =>
+  existsSync(join(process.cwd(), "public", src)),
+);
 const EXTERNO = /^https?:\/\//.test(ENLACE);
 
 export const metadata: Metadata = {
@@ -79,7 +89,7 @@ const ICONOS_DE_BENEFICIOS = [
 export default function LandingAgenciasPage() {
   const preguntas = preguntasPublicables(PREGUNTAS.items);
   const hayPruebaSocial = PENDIENTES.testimonios.length > 0;
-  const { medios, pie } = PENDIENTES;
+  const { medios } = PENDIENTES;
 
   return (
     <div className="min-h-dvh bg-[#f2fcfe] text-[#0b1733] [color-scheme:light]">
@@ -103,16 +113,10 @@ export default function LandingAgenciasPage() {
                 <span aria-hidden className="size-2 rounded-full bg-[#fe6700]" />
                 Para agencias de autos
               </p>
-              <h1 className="text-[2.15rem] leading-[1.08] tracking-tight text-balance sm:text-5xl lg:text-[3.4rem]">
-                {HERO.titular}
-              </h1>
-              <p className="mt-5 max-w-xl text-lg leading-relaxed text-[#33405e] sm:text-xl">
-                {HERO.subtitulo}
-              </p>
-              <div className="mt-8 max-w-md">
+              <HeroRotativo versiones={HERO_VERSIONES}>
                 <BotonDemo />
                 <Microtexto />
-              </div>
+              </HeroRotativo>
             </div>
 
             <div>
@@ -128,7 +132,7 @@ export default function LandingAgenciasPage() {
                   height={640}
                 />
               ) : (
-                <ChatDelDomingo />
+                <ChatDelDomingo fotos={FOTOS_DEL_CHAT} />
               )}
             </div>
           </div>
@@ -493,98 +497,6 @@ export default function LandingAgenciasPage() {
           </div>
         </section>
       </main>
-
-      {/* ── 12. Pie de página ─────────────────────────────────────────── */}
-      <footer className="bg-[#081226] text-sm text-[#a9b6d0]">
-        <div className="mx-auto max-w-6xl space-y-3 px-4 py-10 sm:px-6">
-          <p className="font-bold text-white">
-            {[NOMBRE_DEL_PRODUCTO, pie.razonSocial, pie.cuit && `CUIT ${pie.cuit}`]
-              .filter(Boolean)
-              .join(" · ")}
-          </p>
-          {(pie.whatsapp || pie.correo || pie.direccion) && (
-            <p className="flex flex-wrap gap-x-2">
-              {[
-                pie.whatsapp && (
-                  <a
-                    key="wa"
-                    href={`https://wa.me/${pie.whatsapp.replace(/\D/g, "")}`}
-                    className="underline underline-offset-2"
-                  >
-                    WhatsApp: {pie.whatsapp}
-                  </a>
-                ),
-                pie.correo && (
-                  <a
-                    key="mail"
-                    href={`mailto:${pie.correo}`}
-                    className="underline underline-offset-2"
-                  >
-                    {pie.correo}
-                  </a>
-                ),
-                pie.direccion && <span key="dir">{pie.direccion}</span>,
-              ]
-                .filter(Boolean)
-                .flatMap((el, i) =>
-                  i > 0
-                    ? [
-                        <span key={`s${i}`} aria-hidden>
-                          ·
-                        </span>,
-                        el,
-                      ]
-                    : [el],
-                )}
-            </p>
-          )}
-          {(pie.instagram || pie.linkedin) && (
-            <p className="flex gap-4">
-              {pie.instagram && (
-                <a
-                  href={pie.instagram}
-                  className="underline underline-offset-2"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  Instagram
-                </a>
-              )}
-              {pie.linkedin && (
-                <a
-                  href={pie.linkedin}
-                  className="underline underline-offset-2"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  LinkedIn
-                </a>
-              )}
-            </p>
-          )}
-          <nav aria-label="Legales" className="flex flex-wrap gap-x-5 gap-y-2">
-            {pie.privacidad && (
-              <a href={pie.privacidad} className="underline underline-offset-2 hover:text-white">
-                Política de privacidad
-              </a>
-            )}
-            {pie.terminos && (
-              <a href={pie.terminos} className="underline underline-offset-2 hover:text-white">
-                Términos y condiciones
-              </a>
-            )}
-            <a
-              href="https://www.argentina.gob.ar/produccion/defensadelconsumidor/formulario"
-              className="underline underline-offset-2 hover:text-white"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              Defensa del consumidor
-            </a>
-          </nav>
-          <p>© 2026 {NOMBRE_DEL_PRODUCTO}</p>
-        </div>
-      </footer>
 
       <BarraFijaMovil href={ENLACE} texto={CTA.boton} externo={EXTERNO} />
     </div>
