@@ -1,5 +1,5 @@
 {
-  "name": "tempiax-agencias",
+  "name": "autoventa-agencias",
   "private": true,
   "scripts": {
     "dev": "next dev",
