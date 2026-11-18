@@ -1,0 +1,8 @@
+node_modules/
+.next/
+next-env.d.ts
+*.tsbuildinfo
+.vercel/
+# Gilroy: la licencia prohíbe redistribuir el archivo de la fuente
+public/fonts/*
+!public/fonts/LEEME.txt

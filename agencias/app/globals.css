@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+/*
+ * Gilroy ExtraBold: la licencia permite el uso web pero prohíbe redistribuir el
+ * archivo, así que public/fonts/ está fuera de git. Sin el archivo, los títulos
+ * usan Atkinson (ver la pila de --font-gilroy).
+ */
+@font-face {
+  font-family: "Gilroy";
+  src: url("/fonts/gilroy-extrabold.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --font-gilroy: "Gilroy", var(--font-atkinson), ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-gilroy), var(--font-atkinson), ui-sans-serif, system-ui, sans-serif;
+    font-weight: 800;
+  }
+}
+
+/* El chat del hero: burbujas que entran, fotos que se cargan, puntos de "escribiendo" y el cursor. */
+@keyframes entrada-burbuja {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes entrada-foto {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes punto-escribiendo {
+  0%,
+  60%,
+  100% {
+    transform: none;
+    opacity: 0.45;
+  }
+  30% {
+    transform: translateY(-3px);
+    opacity: 1;
+  }
+}
+@keyframes parpadeo {
+  50% {
+    opacity: 0;
+  }
+}
+.burbuja {
+  transform-origin: bottom;
+  animation: entrada-burbuja 260ms ease-out both;
+}
+.foto {
+  animation: entrada-foto 320ms ease-out both;
+}
+.punto {
+  animation: punto-escribiendo 1.1s ease-in-out infinite;
+}
+.cursor {
+  animation: parpadeo 1s steps(1) infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .burbuja,
+  .foto,
+  .punto,
+  .cursor {
+    animation: none;
+  }
+}
