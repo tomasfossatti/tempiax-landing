@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState, type ReactNode } from "react";
-import { Pause, Play } from "lucide-react";
 
 import type { VersionDelHero } from "../contenido";
 
@@ -14,11 +13,9 @@ const DURACION = 5000;
  *
  * - Las versiones están apiladas en la misma celda de una grilla, así el bloque
  *   toma el alto de la más larga y el botón no salta al cambiar.
- * - El avance lo marca la barrita del indicador: cuando termina su animación
- *   pasa a la siguiente, y pausarla (mouse encima, foco adentro o el botón de
- *   pausa) frena la rotación en el mismo punto.
- * - Sin JavaScript se ve la primera versión y no aparecen los controles. Con
- *   "reducir movimiento" arranca en pausa y cambia solo a pedido.
+ * - Con el mouse encima o el foco adentro (por ejemplo en el botón) no rota,
+ *   para que nadie pierda el texto que está leyendo.
+ * - Sin JavaScript, o con "reducir movimiento", se ve solo la primera versión.
  */
 export function HeroRotativo({
   versiones,
@@ -28,20 +25,21 @@ export function HeroRotativo({
   readonly children: ReactNode;
 }) {
   const [indice, setIndice] = useState(0);
-  const [montado, setMontado] = useState(false);
-  const [pausadoPorUsuario, setPausadoPorUsuario] = useState(false);
+  const [sinMovimiento, setSinMovimiento] = useState(false);
   const [encima, setEncima] = useState(false);
   const [conFoco, setConFoco] = useState(false);
 
   useEffect(() => {
-    setMontado(true);
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      setPausadoPorUsuario(true);
-    }
+    setSinMovimiento(window.matchMedia("(prefers-reduced-motion: reduce)").matches);
   }, []);
 
-  const pausado = pausadoPorUsuario || encima || conFoco;
-  const siguiente = () => setIndice((i) => (i + 1) % versiones.length);
+  const pausado = sinMovimiento || encima || conFoco;
+
+  useEffect(() => {
+    if (pausado) return;
+    const id = setTimeout(() => setIndice((i) => (i + 1) % versiones.length), DURACION);
+    return () => clearTimeout(id);
+  }, [indice, pausado, versiones.length]);
 
   return (
     <div
@@ -80,51 +78,7 @@ export function HeroRotativo({
         ))}
       </div>
 
-      {montado && (
-        <div className="mt-6 flex items-center gap-3">
-          <ul className="flex items-center gap-2">
-            {versiones.map((v, i) => (
-              <li key={v.id}>
-                <button
-                  type="button"
-                  onClick={() => setIndice(i)}
-                  aria-label={`Ver mensaje: ${v.nombre}`}
-                  aria-current={i === indice ? "true" : undefined}
-                  className="group flex h-6 items-center rounded-full focus-visible:ring-4 focus-visible:ring-[#fe6700]/60 focus-visible:outline-hidden"
-                >
-                  <span className="relative block h-1.5 w-8 overflow-hidden rounded-full bg-[#cfe0f6] transition-colors group-hover:bg-[#b5cdee] sm:w-10">
-                    {i === indice && (
-                      <span
-                        key={indice}
-                        onAnimationEnd={siguiente}
-                        className="absolute inset-0 origin-left rounded-full bg-[#1f56e0]"
-                        style={{
-                          animation: `avance-del-hero ${DURACION}ms linear forwards`,
-                          animationPlayState: pausado ? "paused" : "running",
-                        }}
-                      />
-                    )}
-                  </span>
-                </button>
-              </li>
-            ))}
-          </ul>
-          <button
-            type="button"
-            onClick={() => setPausadoPorUsuario((p) => !p)}
-            aria-label={pausadoPorUsuario ? "Reanudar la rotación de mensajes" : "Pausar la rotación de mensajes"}
-            className="flex size-7 items-center justify-center rounded-full text-[#4a5672] transition-colors hover:bg-[#e7effa] hover:text-[#1f56e0] focus-visible:ring-4 focus-visible:ring-[#fe6700]/60 focus-visible:outline-hidden"
-          >
-            {pausadoPorUsuario ? (
-              <Play aria-hidden className="size-3.5" />
-            ) : (
-              <Pause aria-hidden className="size-3.5" />
-            )}
-          </button>
-        </div>
-      )}
-
-      <div className="mt-6 max-w-md">{children}</div>
+      <div className="mt-8 max-w-md">{children}</div>
     </div>
   );
 }

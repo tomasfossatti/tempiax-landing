@@ -26,16 +26,6 @@
   }
 }
 
-/* La barrita que marca cuánto falta para la siguiente versión del hero. */
-@keyframes avance-del-hero {
-  from {
-    transform: scaleX(0);
-  }
-  to {
-    transform: scaleX(1);
-  }
-}
-
 /* El chat del hero: burbujas que entran, fotos que se cargan, puntos de "escribiendo" y el cursor. */
 @keyframes entrada-burbuja {
   from {
