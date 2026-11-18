@@ -5,10 +5,10 @@ import { useEffect, useState, type ReactNode } from "react";
 import type { VersionDelHero } from "../contenido";
 
 /** Cuánto queda cada versión en pantalla, en milisegundos. */
-const DURACION = 5000;
+const DURACION = 7000;
 
 /**
- * El titular y el subtítulo del hero, rotando entre las versiones cada 5
+ * El titular y el subtítulo del hero, rotando entre las versiones cada 7
  * segundos. El botón y el microtexto llegan como `children` y no cambian.
  *
  * - Las versiones están apiladas en la misma celda de una grilla, así el bloque
