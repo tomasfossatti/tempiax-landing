@@ -118,7 +118,7 @@ export function ChatDelDomingo({ fotos }: { readonly fotos: readonly string[] })
 
         {/* Mensajes: el alto es fijo para que el hero no salte mientras llegan */}
         <div
-          className={`flex h-[392px] flex-col justify-end gap-2.5 overflow-hidden bg-[#eaf2fb] px-3 py-4 text-[13.5px] leading-snug text-[#0b1733] transition-opacity duration-500 ${
+          className={`flex h-[412px] flex-col justify-end gap-2.5 overflow-hidden bg-[#eaf2fb] px-3 py-4 text-[13.5px] leading-snug text-[#0b1733] transition-opacity duration-500 ${
             e.desvanecido ? "opacity-0" : "opacity-100"
           }`}
         >
