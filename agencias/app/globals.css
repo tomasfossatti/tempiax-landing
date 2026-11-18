@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+/*
+ * Gilroy ExtraBold: la licencia permite el uso web pero prohíbe redistribuir el
+ * archivo, así que public/fonts/ está fuera de git. Sin el archivo, los títulos
+ * usan Atkinson (ver la pila de --font-gilroy).
+ */
+@font-face {
+  font-family: "Gilroy";
+  src: url("/fonts/gilroy-extrabold.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --font-gilroy: "Gilroy", var(--font-atkinson), ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-gilroy), var(--font-atkinson), ui-sans-serif, system-ui, sans-serif;
+    font-weight: 800;
+  }
+}

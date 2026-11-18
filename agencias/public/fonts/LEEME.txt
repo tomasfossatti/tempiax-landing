@@ -1,0 +1,3 @@
+Colocá acá gilroy-extrabold.woff2 para verla en local.
+No subas el archivo de la fuente al repositorio: la licencia prohíbe redistribuirlo.
+Sin el archivo, los títulos usan Atkinson Hyperlegible.
