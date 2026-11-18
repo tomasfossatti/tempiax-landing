@@ -1,0 +1,6 @@
+{
+  "redirects": [
+    { "source": "/agencias", "destination": "https://tempiax-agencias.vercel.app/", "permanent": false },
+    { "source": "/agencias/:path*", "destination": "https://tempiax-agencias.vercel.app/", "permanent": false }
+  ]
+}
